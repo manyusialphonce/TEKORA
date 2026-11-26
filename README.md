@@ -194,3 +194,8 @@ See [SKU-Level Competitive Pricing Analysis, Wave 01](docs/SKU_LEVEL_COMPETITIVE
 
 
 Wave 01 research evidence and limitations are recorded in [SKU Pricing Wave 01 Research Report](docs/reports/2026-11-26-SKU-PRICING-WAVE-01-REPORT.md).
+
+
+## SKU-level analysis — Waves 02–04 (Categories 03–22)
+
+[SKU-Level Competitive Pricing Analysis — Waves 02–04](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) expands the remaining categories with billable units, monetization structures, free-entry guardrails, public benchmarks where available and validation gates. Quote-only and legally blocked services are explicitly marked rather than assigned invented prices. This completes the first SKU-structure pass across all 22 categories; price approval and supplier validation remain incomplete.
