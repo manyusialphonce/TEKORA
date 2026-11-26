@@ -212,3 +212,9 @@ Research evidence and limitations for Waves 02–04 are recorded in [SKU Pricing
 - [Pricing Research Completion & OpenCode Handoff](docs/reports/2026-11-26-PRICING-RESEARCH-OPENCODE-HANDOFF.md).
 
 **Important:** all pricing research remains provisional. Public competitor prices are not TEKORA wholesale costs or approved selling prices. See the Master SKU Catalogue for launch gates and explicit non-authorizations.
+
+## OpenCode single entry point
+
+- [OpenCode Start Here](docs/OPENCODE_START_HERE.md) — canonical reading order, first-session instructions, phase gates and safety rules.
+- OpenCode command: `/tekora-start` — read-only bootstrap and Phase 00 audit. Existing commands remain available: `/tekora-audit`, `/tekora-prepare`, `/tekora-implement`, `/tekora-verify`.
+- [Consolidated SKU Pricing Waves 02–04](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) — detailed category-level research for 03–22. Wave 02 and Wave 03 files are focused navigation/summary companions; use the consolidated document as the detailed research source for those categories.
