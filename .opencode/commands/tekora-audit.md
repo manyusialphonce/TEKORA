@@ -12,3 +12,6 @@ Do not edit application code, install dependencies, change external services, cr
 Create docs/reports/2026-11-26-PHASE-00-REPOSITORY-AUDIT.md only after collecting evidence. If a report with that exact name already exists, do not overwrite it; choose a new date/time suffix. Include inventory, branch/commit snapshot, docs review, source/build/test/CI status, gaps, security findings, decisions required, recommendations, exact commands and outputs, and statuses DONE/PARTIAL/BLOCKED/MISSING/BROKEN/NEEDS VERIFICATION. Do not claim tests were run if they were not.
 
 Finish with a concise gate recommendation. Do not begin Phase 01 or implementation without owner approval.
+
+
+Before beginning, read `docs/OPENCODE_START_HERE.md`. For pricing catalogue audit, include `docs/MASTER_SKU_PRICING_CATALOGUE.md`, `docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md` and the consolidated `docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md`. Treat Wave 02/03 as navigation summaries. Keep this command read-only and stop at Phase 00.
