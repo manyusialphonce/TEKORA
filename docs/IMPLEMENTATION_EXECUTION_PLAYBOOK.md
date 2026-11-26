@@ -267,3 +267,7 @@ Required work:
 - Gate every saleable SKU on provider evidence, cost/margin, tax/legal review where relevant, customer disclosure, tests and named approval.
 
 A pricing work package cannot close while any customer-facing price is unsupported by a dated source/cost model or while the free tier can create uncontrolled provider cost or surprise charges.
+
+## Required pricing implementation inputs
+
+Before a phase that touches catalogue, product offers, SKU, pricing, checkout, billing, metering, subscriptions or provider fulfilment, include the Master SKU Pricing Catalogue and all three SKU Pricing Waves in the phase reading set. Convert each relevant SKU into traceable requirements and acceptance tests. Do not implement customer-visible prices from research hypotheses. Implement versioned price books, approval/audit, immutable quote snapshots, idempotent usage, budget/limit controls and explicit customer consent before paid conversion. Keep blocked categories unavailable until their legal/provider/operational gates pass.
