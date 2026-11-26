@@ -114,3 +114,9 @@ The service catalog is a working discovery baseline, not proof that all services
 The Blueprint now includes **Section 24 — Original-idea reconciliation and completeness requirements**. It explicitly preserves the originating service proposition (hosting, web/software development, server/website essentials, payment gateway provisioning, email and SMS), the company-as-platform-operator distinction, all-22-category long-term scope, candidate audiences, full service lifecycle, Tanzania control-number safeguards, OpenCode/v0/Figma responsibilities, discovery-before-specification sequence and deferred Wi-Fi/ownership topics.
 
 This is a documentation reconciliation against the planning context available to this session, not a verbatim transcript or a claim that every future requirement has been discovered. See Blueprint Sections 21 and 24 for pending validation and open decisions.
+
+## Additional recovered planning requirements
+
+Blueprint Section 25 records additional requirements from the earliest planning context: secure/feasible technology breadth; connected control-plane engines and service dependencies; organization/project/environment IAM and secrets; developer API/sandbox/webhook/SDK experience; safe automated provisioning; provider abstraction and realistic failover/portability; full internal operations and professional-service project tracking; commercial and Tanzania localization requirements; and candidate differentiators such as visual infrastructure mapping, AI diagnostics, cost optimization and automation.
+
+These are not all approved MVP features. Explicit requirements, assistant proposals and pending validation remain separately classified. Implementation must not start until the traceability and approval gate in Blueprint Section 25.11 is satisfied.
