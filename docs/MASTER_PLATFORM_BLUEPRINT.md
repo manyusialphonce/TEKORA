@@ -1162,3 +1162,38 @@ Companion register: [Color, Typography & UX Validation](COLOR_TYPOGRAPHY_UX_VALI
 A preliminary WCAG contrast calculation found several proposed light-theme text pairings pass; #14B8A6 against white is 2.49:1 and fails both normal and large-text thresholds. Use it only as a non-essential decorative accent on white until a valid pairing is specified. Full theme matrix, focus/border/chart checks, font licensing/specimen/performance and usability evidence remain outstanding. The prototype screen set and design approval checklist are mandatory.
 
 **Section 29–32 status: PARTIAL.** These deliverables improve discovery maturity but do not constitute legal advice, provider approval, final pricing, production API implementation, completed UX research or implementation authorization.
+
+
+---
+
+## 33. Comprehensive discovery addendum and traceability baseline
+
+The additive [Comprehensive Discovery Addendum](COMPREHENSIVE_DISCOVERY_ADDENDUM.md) extends, and does not replace, any previous Blueprint section or companion document. It must be read together with Sections 1–32 and all linked documents.
+
+### 33.1 Shared platform requirement IDs
+
+The addendum establishes PLT-001–PLT-024 for shared platform requirements, including the four platform surfaces, catalogue/SKU separation, tenant and resource ownership, delivery-model transparency, provider abstraction, independent financial and fulfilment lifecycles, idempotency, UNKNOWN/reconciliation, versioned pricing, metering provenance, Tanzania localization, privacy governance, secrets, staff approvals, notifications, support/incident linking, WCAG 2.2 AA, global design system, publication evidence, recovery states, data lifecycle, health separation, audit and release rollback.
+
+### 33.2 All-category traceability
+
+CAT-01–CAT-22 establish stable parent IDs for every existing category. Child requirements must be assigned using the documented functional, non-functional, operations, security, commercial/legal and acceptance ID conventions. Each child must trace to origin, actor, product/SKU, workflow, UI, API/event, entity, permission, provider/region, data governance, security, observability, tests, acceptance evidence, owner, status and change history.
+
+These IDs add traceability; they do not change the category definitions or reduce the long-term catalogue.
+
+### 33.3 Workflows, state machines and data contracts
+
+The addendum provides independent candidate lifecycles for order, provisioning, payment attempt, control number, invoice, subscription, entitlement, usage, settlement, provider resource and support incident; cross-category workflows WF-01–WF-18; transition invariants; shared API/event conventions; and a logical entity inventory. These are proposed design baselines pending domain review and Phase 04 approval. In particular, a control number being issued is not evidence of payment, entitlement is not a payment record, and upstream timeout must not be treated as definite failure.
+
+### 33.4 Provider evidence and Tanzania gates
+
+Provider evidence maturity is classified E0–E5, from unresearched through public documentation, technical validation, commercial validation, legal validation and operational approval. Candidate providers remain unapproved until evidence is recorded. The Tanzania-specific gates cover .tz registrar/partner eligibility, payment-system legal classification, PDPA/PDPC duties, authorized cybersecurity testing, communications sender identity and consent, tax/e-invoicing advice, and consumer/commercial terms. This is not legal advice or proof of provider authorization.
+
+### 33.5 UX, MVP, test and risk baselines
+
+The addendum adds shared navigation, screen IDs and acceptance expectations for public, customer, developer, operations and global settings/error states; evidence-based MVP scoring and decision records; 35 mandatory test scenario IDs; 26 initial risks; and 14 open decision IDs. These are discovery controls, not proof that prototypes, tests, risk treatments or MVP decisions have been completed.
+
+### 33.6 Preservation and status
+
+All prior requirements, 22 category definitions, proposals, decisions, limitations and unresolved items remain in force. The addendum is additive and versioned. Do not delete a requirement because it is not selected for MVP. Do not mark work DONE without inspectable evidence.
+
+**Status: PARTIAL / PROPOSED.** Parent IDs and discovery baselines are added; child-level traceability, provider E2–E5 evidence, legal classification, approved SKU/MVP decisions, final ERD/OpenAPI/AsyncAPI, prototypes, usability evidence, executable tests and formal phase approvals remain outstanding. Application implementation remains NOT STARTED and NOT AUTHORIZED.
