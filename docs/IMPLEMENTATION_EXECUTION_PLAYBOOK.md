@@ -250,3 +250,20 @@ Maintain a requirement traceability index and a decision log. When a requirement
 - Implementation: NOT STARTED.
 
 This playbook is an execution framework. It is not evidence that any application feature has been built or that production readiness has been achieved.
+
+
+## 13. Mandatory pricing workstream
+
+Pricing is a cross-cutting capability and must be designed before catalog/checkout/billing implementation. Read `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md` in full.
+
+Required work:
+- Benchmark comparable competitor prices and record dated URLs, region, currency, tax, product specifications, allowances, renewal and support.
+- Obtain actual provider/wholesale cost evidence and calculate fully loaded cost and category margin floor.
+- Support all 22 category charging units; distinguish one-time, recurring, usage, prepaid, hybrid and quote-based billing.
+- Implement Free/Freemium/Trial/Credits/Sandbox/Paid/Pay-as-you-go/Quote policy with hard quotas, spend caps, end-of-limit behavior and explicit paid conversion.
+- Implement price-book versioning, immutable quote/order/invoice snapshots, FX snapshots, tax references, promotions, approvals and change notices.
+- Test overage, duplicate/late usage, trial expiry, upgrade/downgrade, cancellation, proration, renewal, refund, payment retries and reconciliation.
+- Do not publish unapproved prices or claim the 3–8% undercut as a universal rule.
+- Gate every saleable SKU on provider evidence, cost/margin, tax/legal review where relevant, customer disclosure, tests and named approval.
+
+A pricing work package cannot close while any customer-facing price is unsupported by a dated source/cost model or while the free tier can create uncontrolled provider cost or surprise charges.
