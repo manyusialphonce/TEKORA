@@ -1,6 +1,10 @@
 # TEKORA SKU-Level Competitive Pricing — Wave 03 (Categories 10–22)
 **Snapshot:** 26 November 2026 · **Status:** Provisional, quote-based and not approved.
 
+
+> **Document role:** Focused quick-reference summary for Categories 10–22. The detailed consolidated research source for Categories 03–22 is `SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md`. Read that source before implementation or commercial decisions. This summary does not supersede it.
+
+
 ## 10 — Payments, Billing & Fintech
 SKU: PAY-API (transaction); PAY-MOBILE-MONEY (percent/fixed); PAY-CARD (%+fee); PAY-QR; PAY-PAYOUT; PAY-REFUND; PAY-RECONCILIATION (account/month); PAY-CONTROL-NUMBER; PAY-BILLING (tenant/month); PAY-SANDBOX. Public benchmark from prior research: BLMPay business tier mobile money 3%, cards 3.5%, QR 2.5%; payout fees separately (https://pay.blmtec.co.tz/). Sandbox only. Control number and live processing BLOCKED pending legal classification, licensed provider contract, settlement, custody, BoT review, tax and approvals. No real funds.
 
