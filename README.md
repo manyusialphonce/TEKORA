@@ -186,3 +186,8 @@ TEKORA's proposed competitive target is a modest 3–8% undercut of a genuinely 
 See [Competitive Pricing Benchmark Matrix](docs/COMPETITOR_PRICING_BENCHMARK_MATRIX.md) for the category-by-category public competitor anchors, normalized chargeable units, TEKORA's provisional competitive approach, free-to-paid models, evidence grades, cost/margin formula, approval workflow and open blockers. The companion [research report](docs/reports/2026-11-26-COMPETITOR-PRICING-MATRIX-RESEARCH.md) records the research scope and limitations.
 
 **Status remains PARTIAL / DISCOVERY.** Public competitor prices are benchmarks, not TEKORA wholesale costs. No TEKORA retail price, supplier agreement, legal eligibility, tax treatment, margin floor or free quota is approved. Categories without comparable public rates remain quote-based or blocked pending evidence.
+
+
+## SKU-level competitive pricing — Wave 01
+
+See [SKU-Level Competitive Pricing Analysis, Wave 01](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) for deeper SKU comparisons across Categories 01 (Domains/DNS), 02 (Hosting/Compute) and 09 (SMS/WhatsApp). It includes Tanzania competitor tiers, provisional TEKORA target ranges, SKU catalogue, free-entry rules and outstanding commercial gates. These ranges are not approved retail prices and must pass supplier-cost, tax, legal and margin approval.
