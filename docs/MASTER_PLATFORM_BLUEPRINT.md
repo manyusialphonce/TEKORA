@@ -1106,3 +1106,30 @@ Each category must maintain a traceability matrix linking user-originated idea, 
 ### 27.8 Second-pass audit outcome
 
 **Status: PARTIAL — deeper category product discovery required.** All 22 categories have a structured baseline in Section 26 and deeper candidate decomposition in Section 27. However, the final SKU catalogue, country/provider capability matrix, legal validation, detailed state machines, API contracts, data schemas, price books, SLA commitments and measurable per-product acceptance criteria remain discovery deliverables. This is intentional: they must be verified and approved rather than fabricated. No implementation phase is authorized by this section.
+
+---
+
+## 28. All-category product discovery deep dive and global design-system specification
+
+The following companion specifications are mandatory extensions to this Blueprint:
+
+- [Category Deep Dive — All 22 Services](CATEGORY_DEEP_DIVE_22_SERVICES.md): decomposes each service category into product families, customer journeys, lifecycle, technical/commercial contracts, data, security, operational failure modes and acceptance evidence. It preserves partner/legal/provider uncertainty and records remaining discovery deliverables.
+- [Global Design System — Color, Typography & UX](DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md): defines the proposed visual direction, global color tokens, 22 restrained service accents, theme behavior, typography candidates and specimen strings, information architecture for all four surfaces, interaction/component rules, accessibility/performance requirements and design approval gates.
+
+### 28.1 Binding design principles
+
+The public marketplace, customer portal, developer hub and internal operations must share one coherent design language and component foundation. Category identity is expressed through restrained accents and content-specific workflows, never through 22 disconnected mini-apps. Color, typography, accessibility, responsive behavior, interaction states, information architecture and performance are requirements from the beginning.
+
+### 28.2 Color and typography status
+
+The companion design specification records a proposed cobalt/teal and neutral palette, semantic status tokens, category accents, and Light/Dark/System themes. These are **PROPOSED**, not contrast-certified. The candidate type system (Manrope, Source Sans 3 and IBM Plex Mono, with Geist alternatives for evaluation) is **PROPOSED**, not selected. Contrast matrices, font specimens, Swahili/Latin Extended glyph tests, licensing, payload measurements and responsive rendering must be completed before design approval.
+
+### 28.3 Accessibility and UX acceptance
+
+Target WCAG 2.2 AA. Verify text/non-text contrast, keyboard operation, visible focus, semantic structure, assistive technology announcements, zoom/reflow, reduced motion, touch targets, accessible charts and mobile/tablet/desktop journeys. Automated scans are supplementary and do not constitute proof of conformance. Each key flow requires usability evidence and explicit empty/loading/error/pending/success/recovery states.
+
+### 28.4 Product discovery status
+
+The all-category deep dive is a stronger candidate-product baseline, not a final catalogue. Demand validation, provider/region/contracts, Tanzania legal/tax validation, SKU/price/cost/margin, state diagrams, API/event contracts, data/retention schemas, service ownership, support/SLA capacity, acceptance tests and runbooks remain open.
+
+**Overall status remains PARTIAL.** No application implementation or production capability is implied. Continue discovery phases and require explicit user approval before implementation.
