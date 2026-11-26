@@ -186,3 +186,12 @@ OpenCode may not:
 ## 9. Approval record
 
 No technical decision in this document is APPROVED merely by being written here. Before Phase 05 Platform Foundation, the owner must approve the minimum stack decisions and the deployment/security boundaries. The owner may approve the recommended baseline as a set or request evidence-backed alternatives.
+
+ 
+## 10. Pricing strategy decision
+
+The mandatory 22-category pricing and freemium strategy is defined in `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md`. Its initial market-positioning hypothesis is a 3–8% undercut only for comparable standard offers where fully loaded cost, provider terms, taxes, support and minimum contribution margin permit it. This is not a global discount or approved price list.
+
+**Required architecture:** versioned price books and immutable price snapshots; benchmark/provider cost evidence; FX snapshots; SKU-level margin policies; free-tier/trial/credit entitlements; usage budgets and spend caps; price approvals; price-change notices; promotions; and separate billing components for provider pass-through, TEKORA fees, taxes and payment/payout fees.
+
+**Decision status:** pricing capability requirements are mandatory for design. All TEKORA retail prices, discounts, margins, free quotas and payment fees remain unapproved until market, supplier, finance and legal validation.
