@@ -148,3 +148,17 @@ A phase is not closed until:
 10. The user explicitly approves the next phase.
 
 If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
+
+
+## 14. Original-intent preservation and completeness
+
+- Preserve the originating company-operated technology-services platform proposition: hosting, web/software development, server/website essentials, payment gateway integration/provisioning, email, SMS and the wider useful technology-services landscape.
+- The company operates the TEKORA platform; underlying services can be owned, built, managed, integrated, resold/white-labelled, partner-delivered or hybrid. Make actual operator, provider dependency, support boundary and limitations explicit.
+- Keep all 22 categories and all advanced subfeatures in the long-term catalogue. The user requested analysis of all categories; MVP prioritization may defer delivery but must never silently remove scope.
+- Validate candidate customer groups and their journeys; do not turn candidate personas into approved segmentation without evidence.
+- Analyse each service lifecycle from discovery through order, payment, provisioning, configuration, usage, support, renewal, cancellation and recovery. Keep order, payment, control-number, provisioning and service states distinct.
+- Treat Tanzania control-number management as a first-class lifecycle with unique mapping, expiry, renewal/replacement, cancellation, matching, duplicate/partial/under/overpayment handling where supported, unmatched reconciliation, refunds/reversals, provider verification and audit. Screenshots are not proof of payment.
+- Preserve discovery order: idea/context → all-category service analysis → requirements → UX research/design → architecture/stack validation → approved implementation.
+- OpenCode owns implementation in approved scope; v0/Figma are research/prototyping aids. Research Stripe, Vercel, Cloudflare, DigitalOcean, Supabase, Twilio and Linear honestly. Typography research must include Swahili/special characters, role-specific fonts, accessibility, performance and licensing.
+- Company ownership/shareholding is deferred; a separate Wi-Fi management system is excluded unless explicitly approved.
+- Refer to Blueprint Section 24 as the originating-intent reconciliation. If details conflict, record a decision/open question; do not silently discard or invent.
