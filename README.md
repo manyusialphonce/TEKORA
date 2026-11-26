@@ -156,3 +156,8 @@ The additive register in [Comprehensive Discovery Addendum](docs/COMPREHENSIVE_D
 **Additive preservation rule:** this addendum does not replace or shorten the existing Blueprint, category deep dive, provider research, SKU/pricing, architecture, design-system or validation documents. All 22 categories remain in long-term scope even if a future MVP excludes some. Requirements and decisions must be versioned; do not silently delete or rewrite user-originated scope.
 
 **Current state remains discovery only.** Requirement child mappings, approved MVP SKUs, provider E2–E5 evidence, legal classification, final data/API schemas, prototypes, usability research, executable tests and formal phase approvals remain incomplete. No implementation or production capability is claimed.
+
+
+## Free developer domains
+
+TEKORA's discovery scope now includes the user-requested **Developer Free Domain & Preview Environment Program**. See [Developer Free Domain Program](docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md). It proposes free TEKORA-managed subdomains for eligible junior developers, students and builders to test, preview and demonstrate projects. A free hostname is not automatically free hosting, compute, email, storage or a registrable custom domain. Suffix ownership, DNS/TLS provider, exact quotas, renewal policy, abuse operations, costs and legal terms remain unverified; the feature is not implemented or approved for launch.
