@@ -204,3 +204,12 @@ Before approving product requirements or implementation:
 - Color contrast, typography and UX prototype gates: `docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md`
 
 Treat all candidate providers and MVP packages as hypotheses. Require written legal/commercial approval, verified provider capability, cost model, support/runbook and technical proof. Use separate financial state machines and reconcile UNKNOWN upstream outcomes. The #14B8A6 on white pairing fails contrast and cannot be used as text. Complete the full light/dark/system contrast matrix and font licensing/specimen/performance validation before design sign-off.
+
+
+## Mandatory comprehensive discovery addendum and preservation rules
+
+Read `docs/COMPREHENSIVE_DISCOVERY_ADDENDUM.md` in full alongside every canonical document. This addendum adds stable platform IDs PLT-001–PLT-024 and category parents CAT-01–CAT-22; a controlled child-ID scheme; detailed independent order, provisioning, payment-attempt, control-number, invoice, subscription, entitlement, usage, settlement, provider-resource and incident state machines; 18 cross-category workflow IDs; shared data/API conventions and logical entity inventory; provider evidence classes E0–E5 and candidate due-diligence matrix; UX navigation and screen acceptance inventory; evidence-based MVP scoring; test scenarios TST-001–TST-035; risks RSK-001–RSK-026; and open decisions DEC-001–DEC-014.
+
+**Do not reduce or remove existing scope.** The new register supplements all existing project documents. Preserve every category, feature, user-originated requirement, limitation, decision and unresolved item. Deferring a category/product from MVP does not delete it from the long-term platform scope. Version changes and retain history. Distinguish user requirements, approved decisions, assistant proposals and external obligations.
+
+The current status remains discovery/documentation only. No application implementation, provider activation, live payment, production deployment or launch is authorized by the existence of this addendum. Require evidence and explicit approval at each phase gate.
