@@ -194,3 +194,8 @@ Earlier pricing research remains in [2026-11-26 Pricing & Monetization Research]
 ## SKU-level detail — Wave 01
 
 The first detailed SKU analysis is available in [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md). It deepens Categories 01, 02 and 09 with multiple Tanzania price observations, SKU-level target hypotheses, chargeable units, renewal/segment handling and approval blockers. This is additive; all 22 categories remain in scope. No proposed range is an approved TEKORA price.
+
+
+## SKU pricing coverage — Waves 02–04
+
+[SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) extends detailed pricing structures through Categories 03–22. This is a first-pass pricing architecture: public prices are benchmarks only; where evidence is weak or services are contract-specific, pricing remains quote-based or blocked. All 22 categories remain in scope; commercial approval remains outstanding.
