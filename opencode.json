@@ -7,5 +7,5 @@
     "docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md",
     "docs/TECHNICAL_DECISION_REGISTER.md"
   ],
-  "snapshot": true
+  "snapshots": true
 }
