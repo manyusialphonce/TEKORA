@@ -15,7 +15,7 @@
 
 ## Required first command
 
-Run `/tekora-audit`. This is read-only and must inspect the actual full repository tree and current working tree; do not rely on historical claims. The 26 November 2026 GitHub tree snapshot was documentation/configuration only (no application source, package/build manifests, migrations, tests or CI workflow). Re-check because the checkout may have changed.
+Run `/tekora-start`. It is the canonical first-session bootstrap: it reads this guide and the mandatory project documents, then performs the read-only Phase 00 audit. If you intentionally start without the bootstrap command, run `/tekora-audit` manually. The audit must inspect the actual full repository tree and current working tree; do not rely on historical claims. The 26 November 2026 GitHub tree snapshot was documentation/configuration only (no application source, package/build manifests, migrations, tests or CI workflow). Re-check because the checkout may have changed.
 
 The audit must produce an evidence-based Phase 00 report. It must identify existing work, missing source/runtime prerequisites, documentation conflicts, security risks and exact next actions. It must not implement code.
 
