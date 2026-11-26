@@ -209,3 +209,17 @@ Before approving a category, provider, SKU, payment capability, regulatory claim
 - `docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md`
 
 Public documentation is not a contract or proof of eligibility. Require legal/commercial verification and technical evidence. Do not publish unverified provider coverage, licensing, .tz registrar status, payment/control-number support, price, tax treatment or SLA. Preserve separate order/payment/control-number/invoice/subscription/entitlement/settlement lifecycles. The proposed light palette contains a known failure: #14B8A6 on white is only 2.49:1 and must not be used as normal/large text there. Full theme/pair validation is mandatory. No font is approved until exact file licensing, Swahili/Latin glyphs and performance are checked.
+
+
+## 16. Additive comprehensive discovery register
+
+Before refining requirements, architecture, provider choices, UX, MVP or tests, read `docs/COMPREHENSIVE_DISCOVERY_ADDENDUM.md` in full. It establishes PLT-001–PLT-024, CAT-01–CAT-22, stable child-ID conventions, independent financial and fulfilment state machines, workflow catalogue, logical data/API contracts, provider evidence classes E0–E5, screen acceptance inventory, MVP scoring, TST-001–TST-035, RSK-001–RSK-026 and DEC-001–DEC-014.
+
+Preservation rules:
+- This addendum is additive; it does not supersede or shorten any prior document.
+- Keep all 22 categories and their original detail even when a candidate is deferred from MVP.
+- Preserve user-originated wording and distinguish it from proposals and external obligations.
+- Never recycle requirement IDs or silently delete rejected/deferred requirements.
+- A provider at E1 is not approved; provider onboarding requires risk-appropriate E2–E5 evidence.
+- UNKNOWN upstream outcomes require reconciliation before retry or customer claims.
+- No requirement is DONE without evidence; no implementation begins without the relevant phase gate and explicit user authorization.
