@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "plan",
+  "instructions": [
+    "AGENTS.md",
+    "docs/ENGINEERING_ENVIRONMENT_AND_OPENCODE_RUNBOOK.md",
+    "docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md",
+    "docs/TECHNICAL_DECISION_REGISTER.md"
+  ],
+  "snapshot": true
+}
