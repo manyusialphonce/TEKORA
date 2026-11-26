@@ -179,3 +179,10 @@ The repository now includes an OpenCode-ready engineering workflow:
 Pricing is a critical platform-wide capability across all 22 service categories. See [Product Catalogue, SKU & Pricing Framework](docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md) for the 26 November 2026 competitor benchmark snapshot, category-by-category monetization units, free/freemium/trial/sandbox/paid policy, TZS market positioning, cost and margin guardrails, price-book requirements and acceptance criteria.
 
 TEKORA's proposed competitive target is a modest 3–8% undercut of a genuinely comparable market offer only where provider cost, quality, tax, support and minimum contribution margin allow. This is not a universal discount or an approved retail price. Some products should be at parity, premium, usage-based or quote-only. Free tiers must have explicit limits and upgrade paths; never promise every service free or silently auto-charge after a trial. No customer-facing TEKORA price is approved until cost, provider, tax, margin and commercial review are complete.
+
+
+## Competitive pricing benchmark matrix — all 22 categories
+
+See [Competitive Pricing Benchmark Matrix](docs/COMPETITOR_PRICING_BENCHMARK_MATRIX.md) for the category-by-category public competitor anchors, normalized chargeable units, TEKORA's provisional competitive approach, free-to-paid models, evidence grades, cost/margin formula, approval workflow and open blockers. The companion [research report](docs/reports/2026-11-26-COMPETITOR-PRICING-MATRIX-RESEARCH.md) records the research scope and limitations.
+
+**Status remains PARTIAL / DISCOVERY.** Public competitor prices are benchmarks, not TEKORA wholesale costs. No TEKORA retail price, supplier agreement, legal eligibility, tax treatment, margin floor or free quota is approved. Categories without comparable public rates remain quote-based or blocked pending evidence.
