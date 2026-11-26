@@ -688,3 +688,171 @@ Before implementation, each accepted capability must have stable requirement ID/
 
 ### 25.12 Provenance
 This is a structured reconstruction of additional requirements available from the earliest planning context, not a verbatim export of every message. Keep explicit user requirements separate from assistant proposals and unresolved validation; never promote a proposal to an approved decision without user acceptance.
+## 26. Implementation-ready specification for all 22 service categories
+
+This section upgrades the catalog from a feature inventory into an engineering specification baseline. It supplements Sections 1–25. It does not assert that any product, provider, integration, certification, commercial agreement or capability is already available. Every category must be decomposed into approved product offers and traceable requirements before implementation.
+
+### 26.0 Mandatory specification contract for every category
+
+For every category and each product within it, discovery and requirements MUST complete this record. Unknowns are explicitly marked TBD / NEEDS VERIFICATION / BLOCKED with an owner and resolution phase; implementation agents must never guess:
+1. Purpose, customer problem/outcome, target actor, measurable value, use cases and exclusions.
+2. Product decomposition: product families, SKUs/offers, plans, add-ons, bundles, optional/advanced features and sandbox/demo boundaries.
+3. Delivery model: owned, managed, integrated, authorized reseller, partner-delivered or customer-provided; actual operator, support boundary and provider/contract dependencies.
+4. Eligibility/prerequisites: region, identity/KYC where applicable, ownership proof, technical dependencies, quota/capacity, provider account, permissions and approvals.
+5. Configuration schema: selectable fields, types, defaults, validation, constraints, secret classification, immutable/mutable fields and plan limits.
+6. Lifecycle state machine: statuses, actors, guards, transitions, timeouts, retry and customer-visible progress.
+7. Customer workflows: discovery, comparison, configuration, quote/order, checkout, onboarding, dashboard, change/scale, usage, support, renew, migrate, export, cancel and recover.
+8. Staff workflows: approval, fulfilment, provider operations, exceptions, finance reconciliation, incident response and audit.
+9. Data model: entities, identifiers, relationships, tenant/org/project/resource ownership, source of truth, classification, retention, export and deletion.
+10. API/event contracts: operations, auth/scopes, idempotency, pagination, errors, limits, versioning, webhooks, signatures, retries, ordering and replay.
+11. Provisioning: adapters/workers, orchestration, secret injection, retries/backoff, idempotency, compensation/saga, rollback, reconciliation and teardown.
+12. Security/abuse: threat model, least privilege, tenant isolation, encryption, secrets, audit, rate/abuse controls, fraud, approvals and separation of duties.
+13. Reliability/operations: evidence-backed SLI/SLO/SLA, health checks, monitoring, alerting, runbooks, incident escalation, backup/restore, RTO/RPO and capacity.
+14. Commercial model: pricing metric, limits, recurring/one-time/usage charges, quote rules, price snapshots, refunds, cancellation, proration and reconciliation.
+15. UX/accessibility/localization: responsive states, accessible controls, keyboard/focus, Swahili/English, time zones, currency and provider disclosures.
+16. Testing/acceptance: unit, integration, contract, provider sandbox, E2E, security, performance, resilience, accessibility, migration/restore and negative tests.
+17. Documentation/support: customer docs, operator runbooks, API reference, troubleshooting, limitations, support ownership and change log.
+18. Traceability: stable ID in the TEK-CAT-XX-### format, source/decision status, priority, phase, dependencies, acceptance evidence and approval.
+
+Use shared engines for customer, pricing, order, billing, entitlement, provisioning, provider, notification, audit and support. Category-specific domain rules remain in their bounded context. Do not create a microservice solely because a category exists.
+
+### 26.1 Category 01 — Domains, DNS & Internet Services
+**Product families:** domain search/availability; registration, transfer and renewal; portfolio/contact management; DNS hosting; advanced traffic steering; DNS security; certificate lifecycle integrations; domain/IP/network intelligence; CDN/edge; migration and recovery.
+**Functional scope:** RDAP-first lookup with fallback and source/time disclosure; availability confidence; TLD eligibility and premium/reserved handling; registration, transfer-in/out, renewal and TLD-specific grace/redemption/pending-delete lifecycle; registrant contacts, verification, privacy/proxy where permitted, locks, nameservers and auth/EPP codes; DNS zones/records, bulk import/export, templates, validation, version/diff/rollback, TTL and propagation diagnostics; DNSSEC; GeoDNS, weighted, latency and failover policies with health checks; reverse DNS/IP/ASN/CIDR/BGP integrations; certificate inventory, CSR/validation/issuance/renewal/revocation through authorized CAs; CDN configuration; abuse/phishing/typosquat/expiry monitoring; SPF/DKIM/DMARC/MTA-STS/TLS-RPT checks; migration preflight, cutover, rollback and verification.
+**Controls/workflows:** prove domain ownership before sensitive changes; step-up auth/approval for transfer, registrant, nameserver and DNSSEC changes; protect auth codes/private keys; detect conflicting records; stage/diff bulk changes; audit and notify verified contacts. TLD rules differ. .tz offers require verified registrar authorization and current registry/TCRA rules. Never claim registrar/CA status without evidence. Failover is subject to TTL, caching and provider behavior.
+**Data/integrations:** domain, TLD policy, registrar account, registrant, transfer, zone, record, DNSSEC metadata, certificate, IP allocation, provider account, change set and audit. Integrate registrar/registry, RDAP, DNS providers, authorized CAs, CDN and IP/ASN/BGP sources.
+**Acceptance:** TLD lifecycle matches provider rules; unauthorized changes fail; DNS import/export round-trips; rollback is tested; expiry alerts work; security findings cite evidence; provider outage is visible; .tz sales remain disabled until authorization is verified.
+
+### 26.2 Category 02 — Web Hosting, Application Hosting & Compute
+**Product families:** shared/reseller hosting; managed WordPress/CMS; static hosting; PHP/Node/Java/Python/.NET runtime; VPS; dedicated/bare metal; managed application hosting; staging and migration.
+**Functional scope:** plan/region/OS/runtime catalogue; CPU/RAM/storage/bandwidth/process/inode/database/mail limits; domain/SSL attachment; site/app creation; Git/artifact deployment; build/start commands; env vars and secret references; database/cache attachment; SSH/SFTP/console; safe file manager if offered; cron; logs/metrics/health; staging/clone/restore; backups/snapshots; resize/upgrade/downgrade; IP/firewall; DNS integration; deployment history/rollback; malware and abuse controls.
+**Provisioning:** validate plan capacity; reserve quota; create isolated account/VM/runtime; configure network/firewall/OS/runtime; attach storage/domain/certificate; inject secrets; create database/backup/monitoring; run readiness probes; deliver scoped access; reconcile actual provider resources with desired state. No default root credential exposure; use scoped, rotatable access.
+**Operations:** capacity/noisy-neighbour controls; throttling; abuse suspension; patching/maintenance; migration; restore drills; provider outage/degraded state; export and secure deletion. Disclose TEKORA versus customer responsibility.
+**Acceptance:** tenant isolation; plan limits; deploy/rollback; scoped SSH/secrets; proven backup restore; metering reconciliation; capacity-aware resize; idempotent suspend/resume/cancel; secret redaction.
+
+### 26.3 Category 03 — Cloud Infrastructure & Virtualization
+**Product families:** VMs, bare metal, virtual networks, block/object storage, snapshots/images, load balancers, public IPs, private networks and autoscaling.
+**Functional scope:** region/zone/flavour/image catalogue; create/resize/reboot/stop/start/rebuild/delete; SSH keys and cloud-init; network/subnet/router/security groups; public/floating IP; volumes/snapshots; image templates; load-balancer listeners/pools/health probes; firewall/routing; quota/capacity; tags; topology; drift; cost/usage; IaC/API integration and change preview.
+**Controls:** project ownership; approvals for destructive actions; quota reservation; policies for public exposure/open ports/unencrypted disks; immutable audit; snapshot consistency caveats; prevent accidental deletion of attached/critical resources; disclose region/data residency/provider constraints. Normalization must retain provider-specific fields.
+**Acceptance:** provider state reconciliation; duplicate requests do not create duplicate resources; cross-project access denied; estimates disclose assumptions; network changes audited; snapshot/restore and deletion safeguards tested; outages do not show false healthy state.
+
+### 26.4 Category 04 — Containers, Kubernetes & Runtime
+**Product families:** image registry; container application runtime; managed/self-managed Kubernetes; clusters/node pools; Helm; ingress/service mesh integrations; GitOps and workload observability.
+**Functional scope:** repositories/tags/immutable digests/retention/scanning; cluster create/upgrade/scale/delete; node pools/autoscaling; namespace/project mapping; workload/deployment/statefulset/job/cronjob; config and secret references; service/ingress/load balancer; storage/PVC; Helm install/upgrade/rollback; GitOps reconciliation; admission policies; logs/metrics/traces; cluster backup/restore; version compatibility/deprecation.
+**Controls:** cluster RBAC and namespace isolation; image provenance/signing; admission policies; secret encryption; network policies; resource quotas; privileged workload restrictions; patching; upgrade preflight/rollback. Kubernetes is not default for simple workloads when a smaller runtime is safer or cheaper.
+**Acceptance:** cross-namespace access denied; image digest/scan traces to deployment; failed rollout rollback; upgrade compatibility checked; quotas enforced; restore demonstrated; health not inferred only from desired replica count.
+
+### 26.5 Category 05 — Networking & Connectivity
+**Product families:** virtual networks, VLAN/subnets, IPAM, public/private IP, VPN, routing, load balancing, bandwidth/QoS, private links, SD-WAN/BGP integrations; managed Wi-Fi only if separately approved.
+**Functional scope:** address allocation/conflict detection; CIDR/IP calculator and inventory; route tables/gateways/NAT; firewall/security policies; VPN peer/site configuration, tunnel health and key rotation; DNS; load-balancer listeners/pools; bandwidth plans/usage; topology; latency/loss/throughput monitoring; change windows and rollback; BGP/ASN visibility where supported.
+**Controls:** least-privilege network roles; approval for public exposure/routes/firewall-wide rules; validation/dry-run; VPN secret protection; audit; DDoS/abuse escalation; customer-owned boundaries. Do not merge the separate Wi-Fi project.
+**Acceptance:** IP conflicts prevented; unauthorized route/firewall changes denied; VPN secrets not logged; rollback tested; tunnel failures detected; topology identifies source/time; Wi-Fi remains excluded absent approval.
+
+### 26.6 Category 06 — Database Services
+**Product families:** managed PostgreSQL, MySQL, MariaDB, SQL Server and justified NoSQL engines; Redis/cache; migration and performance services.
+**Functional scope:** engine/version/region/instance/storage catalogue; create cluster/database/users/roles; private/public connectivity; allowlists/TLS; parameter groups; backup/retention/PITR; replicas/read endpoints; HA/failover; engine upgrades/maintenance; query/connection/storage metrics; slow query insights; migration/import/export; pooling; encryption/key management; restore to new instance and PITR validation.
+**Controls:** designated system of record; Redis is not silently substituted for durable storage; tenant isolation; least privilege; encrypted storage/connections; secret rotation; audit; network isolation; patching; backup immutability where supported; production change approval. No public database port by default.
+**Acceptance:** restore/PITR data verified; role boundaries tested; backup age/retention visible; failover/RPO measured; migration preflight and recovery plan; telemetry does not leak secrets or customer data.
+
+### 26.7 Category 07 — Storage, Backup & Disaster Recovery
+**Product families:** object/block/file storage; S3-compatible storage; snapshots; backup management; replication; archive; DR planning and restore testing.
+**Functional scope:** buckets/volumes/shares; access policies; lifecycle/tiering; versioning; object lock/immutability where supported; encryption/key ownership; multipart transfer; quotas; replication; snapshots; backup schedules/retention/legal hold; file/object/volume/database/application restore; cross-region copies; recovery plans; RTO/RPO; backup verification; export and deletion.
+**Controls:** private-by-default buckets; public exposure warning/approval; separate backup administration; ransomware-resilient credentials; immutable copies where supported; encryption; retention/deletion safeguards. Backup success is not proof of recoverability.
+**Acceptance:** restore drill evidence; checksum/integrity checks; retention/deletion correctness; measured RTO/RPO; replication lag and provider limits visible.
+
+### 26.8 Category 08 — Email Infrastructure
+**Product families:** business mailboxes; domains/aliases/groups; transactional API; consent-based bulk email; SMTP relay; archive/migration; deliverability/security.
+**Functional scope:** domain verification; mailbox lifecycle/quota; aliases/groups/forwarding; migration; IMAP/POP/SMTP; API/SMTP credentials; templates/events; sender verification; SPF/DKIM/DMARC/MTA-STS/TLS-RPT diagnostics; bounce/complaint/suppression/unsubscribe; delivery analytics; reputation guidance; spam/malware filtering; archive/retention only where lawful and contracted.
+**Controls:** lawful basis/consent for bulk email; suppression and unsubscribe; sender verification; rate/abuse limits; credential rotation; privacy/retention; anti-spoofing; no open relay; mailbox access audit and tenant isolation.
+**Acceptance:** unauthorized sender rejected; DNS checks evidence-based; bounce/complaint updates suppression; unsubscribe respected; secrets redacted; migration reconciled; no unsupported deliverability guarantees.
+
+### 26.9 Category 09 — SMS, Voice & Omnichannel Communication
+**Product families:** SMS/OTP; transactional messaging; voice; virtual numbers; IVR; approved WhatsApp/other channels; push; unified API.
+**Functional scope:** provider/channel capability catalogue; sender ID/number provisioning; localized templates; recipient normalization; consent/opt-out; message/call creation; delivery receipts/status; OTP generation/verification/expiry/rate limits; voice routing/IVR/recording controls; scheduling where lawful; webhook events; usage/cost metering; provider health/fallback where supported; analytics/suppression.
+**Controls:** protect OTPs/phone numbers; prevent enumeration, SMS pumping and toll fraud; rate-limit by actor/IP/device/tenant/destination; consent/opt-out; approved sender IDs; recording consent/legal validation; fallback only when channel semantics and contracts allow.
+**Acceptance:** idempotent duplicate handling; OTP expiry/replay protection; opt-out enforcement; accepted versus delivered states distinguished; outage/fallback visible; usage reconciled; sensitive message content minimized in logs.
+
+### 26.10 Category 10 — Payment Infrastructure, Billing & Fintech Integrations
+**Product families:** payment provider integrations/orchestration; authorized mobile money/bank/card acceptance; invoices/receipts; subscriptions; usage billing; refunds/reversals; control-number/reference payments; reconciliation.
+**Functional scope:** country/currency/channel capability matrix; checkout/payment intent; invoice/receipt lifecycle; provider status query; authenticated webhook intake; signature/idempotency/replay/event ordering; refunds/reversals/disputes where supported; settlement/fees; statement reconciliation; subscriptions/retries/proration; metered usage; credits/adjustments; control number create/assign/verify/expire/renew/replace/cancel; unique mapping to customer/org/order/invoice/subscription; partial/under/overpayment and unmatched/late transaction handling where supported; exception queues/audit.
+**Controls:** no raw card storage unless separately approved compliant architecture; prefer hosted/tokenized flows; sandbox/live isolation; no live movement before legal/provider approval; screenshots are not proof; trusted signed callback or provider query; dual control for refunds/manual adjustments; reconcile gross/fees/net/currency. No unsupported claim that TEKORA is a bank, custodian, licensed processor or government collection agent.
+**Acceptance:** duplicate callback cannot double-credit; forged/replayed callbacks rejected; payment confirmed only with trusted evidence; control-number, payment and invoice lifecycles separate; reconciliation exceptions visible; settlement balances; sandbox cannot cause live effects; late callbacks recover safely. Validate Tanzania tax/fees/payment/control-number rules and provider contracts.
+
+### 26.11 Category 11 — Developer Tools & API Infrastructure
+**Product families:** API gateway/management; catalog/marketplace; developer portal; auth/token services; webhook infrastructure; event broker; schema registry; SDK/docs; API monetization/analytics.
+**Functional scope:** API product/version lifecycle; OpenAPI/schema validation; routing; OAuth/OIDC/API key/mTLS where appropriate; scopes; quotas/rate/burst/concurrency limits; version/deprecation; developer apps/projects; credential issue/rotate/revoke; sandbox fixtures; webhook subscriptions/signing/retry/dead-letter/replay; event logs; SDK generation/release; usage/error/latency analytics; contract tests/changelog.
+**Controls:** secret storage/one-time display; scope isolation; gateway abuse protection; request size/timeouts; PII redaction; webhook SSRF and destination verification; signature timestamp/replay window; tenant quotas; compatibility gates. Catalog listing does not mean API is live.
+**Acceptance:** published API matches deployed contract; revoked key fails; limits deterministic; webhook signatures/retries work; sandbox isolated; breaking changes follow version policy; SDK samples compile against documented API.
+
+### 26.12 Category 12 — Software Development, DevOps & Deployment
+**Product families:** source control integrations; CI/CD; build runners; environments; artifact management; IaC; release/change management; preview deployments/rollback.
+**Functional scope:** repository connection with minimal scopes; webhook verification; build/test/package pipelines; isolated runners; environment promotion; protected branches/approvals; artifact retention/signing; rolling/blue-green/canary deployment where supported; secrets injection; health checks; rollback; preview environments; IaC plan/apply approvals; release notes; SBOM/dependency scanning; audit/cost.
+**Controls:** ephemeral isolated runners; untrusted PRs cannot access production secrets; branch/environment protection; signed artifacts/provenance; secret masking; pinned dependencies; production/destructive IaC approval; least-privilege tokens; build network restrictions.
+**Acceptance:** untrusted code cannot access protected secrets; artifact provenance traceable; failed deployment recovers safely; approvals enforced; webhook authenticity verified; runner cleanup prevents leakage; deployment state reconciles with target.
+
+### 26.13 Category 13 — Cybersecurity & Information Security
+**Product families:** posture assessment; vulnerability scanning; authorized penetration testing; WAF/DDoS and endpoint integrations; cloud/container posture; SIEM; incident response; advisory/managed security.
+**Functional scope:** asset/scope inventory; written authorization/rules of engagement; safe scan scheduling/rate limits; finding severity/evidence/remediation; false-positive review; retest; attack-surface inventory; configuration baselines; threat intel; SIEM correlation; incident timeline/evidence/containment approval; risk register; advisory and evidence mapping.
+**Controls:** no test without explicit authorization and scope; no destructive tests unless separately authorized; isolate customer data; secure evidence/chain of custody; disclosure/retention policy; emergency stop; separate tester/approver; no certification claims from tools.
+**Acceptance:** scope enforced technically; findings reproducible and timestamped; false-positive review; closure requires retest; authorization audited; evidence access controlled; no out-of-scope target touched.
+
+### 26.14 Category 14 — Monitoring, Observability & SRE
+**Product families:** uptime/synthetic monitoring; infra/app metrics; logs/traces/APM; database/network/container monitoring; alerting/on-call; status pages; SLO/error-budget/capacity analytics.
+**Functional scope:** agents/exporters/API ingestion; metrics/logs/traces; tenant labels/isolation; dashboards; regional synthetic probes; alert rules/dedup/group/routing/escalation/silence; incident lifecycle; status components/maintenance; SLI/SLO/error budgets; dependency maps; retention/sampling; anomaly/AI diagnostics; runbooks/postmortems.
+**Controls:** minimize data and scrub PII/secrets; authenticated ingestion; cardinality/cost limits; access-controlled dashboards; alert fatigue controls; retention; separate public status from internal incident notes.
+**Acceptance:** alert fires in defined test window; duplicate alerts group; SLO matches source data; tenant isolation; secrets scrubbed; regional failures identify source/time; status updates audited.
+
+### 26.15 Category 15 — AI, ML & Automation Infrastructure
+**Product families:** model/provider gateway; hosted inference; GPU/CPU compute; training/fine-tuning; model registry/evaluation; embeddings/vector/RAG; agent/workflow automation; AI governance/observability.
+**Functional scope:** model/provider capability catalogue; credential management; routing/fallback with compatibility disclosure; prompt/model versions; inference endpoints; token/compute usage; quotas/budgets; latency/error/cost metrics; embedding/index lifecycle; dataset/model lineage; evaluation suites; guardrails; permission-aware retrieval; agent tool registry; approvals; feedback; deprecation/rollback.
+**Controls:** tenant/data isolation; prompt injection/exfiltration threat model; no training on customer data without explicit policy/consent; PII minimization; provider retention disclosure; output validation; tool allowlists; least privilege; human approval for consequential actions; budget limits; distinguish generated output from evidence.
+**Acceptance:** model route/version traceable; quotas enforced; RAG respects source permissions; tool actions authorized; evaluations precede release; fallback limitations disclosed; no cross-tenant data leakage.
+
+### 26.16 Category 16 — Media, Video & Realtime Infrastructure
+**Product families:** media storage/transformation; image processing; audio/video transcoding; VOD/live; CDN; WebRTC rooms; conferencing/classrooms; realtime messaging/presence; transcription/subtitles.
+**Functional scope:** resumable upload; metadata/processing jobs; codecs/resolution profiles; thumbnails/transforms; HLS/DASH packaging; CDN origin; signed playback URLs/tokens; WebRTC signaling/ICE/TURN/SFU integration; rooms/participants/roles/presence/chat; recording consent/start/stop/retention; transcription/subtitles; playback QoE/bandwidth monitoring.
+**Controls:** ownership/usage rights; recording/transcription consent; private-by-default media; signed expiring access; moderation/reporting where applicable; retention/deletion; regional processing disclosure; secure realtime tokens.
+**Acceptance:** unauthorized playback denied; upload/transcode recoverable; manifests/renditions validated; participant permissions enforced; consent/retention enforced; QoE separates client/network/provider failure.
+
+### 26.17 Category 17 — Data Engineering & Analytics
+**Product families:** ingestion/connectors; ETL/ELT/CDC; stream processing; warehouse/lake; orchestration; data quality/lineage; BI/reporting/data science.
+**Functional scope:** source connection and credential vault; schema discovery; batch/stream ingestion; CDC offsets/checkpoints; transformation versions; orchestration dependencies; retries/backfills; data contracts/schema evolution; quality rules; lineage/catalog; warehouse/lake; access-controlled datasets; dashboards/reports/exports; freshness/quality/cost observability.
+**Controls:** classification/purpose limitation; least-privilege source access; encryption; PII masking/tokenization; lineage/audit; retention/deletion propagation; row/column access where supported; secret redaction; residency/cross-border transfer validation.
+**Acceptance:** replay/backfill idempotent or reconciled; breaking schema detected; freshness/quality alerts; lineage source-to-output; permissions enforced; deletion/retention verified.
+
+### 26.18 Category 18 — Business Applications & Digital Productivity
+**Product families:** ERP/finance integrations; CRM; HRM; project/task management; collaboration/documents; workflow/forms; e-commerce; app marketplace; managed app lifecycle.
+**Functional scope:** app catalogue/publisher verification; tenant provisioning; roles/SSO; configuration; user/license assignment; data import/export; integrations/sync; workflow; audit; managed updates/version compatibility; backups; seat billing; health/support; marketplace review/approval/deprecation.
+**Controls:** vendor due diligence; permission/data-sharing disclosure; tenant isolation; least privilege; SSO lifecycle; token rotation; export at termination; update rollback; privacy/retention; distinguish TEKORA-built from third-party apps.
+**Acceptance:** installation discloses permissions/cost; offboarding revokes access; sync failures visible/recoverable; tenant export works; versions traceable; support boundaries explicit.
+
+### 26.19 Category 19 — IT Consulting, Managed IT & Professional Services
+**Product families:** discovery/consulting; software engineering; cloud/network/database/DevOps implementation; managed IT/helpdesk; audits/training; migration/support retainers.
+**Functional scope:** lead/opportunity; discovery/requirements; scope of work; quote/contract; SOW assumptions/exclusions/change requests; staff assignment; schedule/milestones; time/work logs; deliverables/evidence; acceptance/sign-off; support retainer/SLA; approved expenses; milestone invoicing; handover/knowledge transfer/closure.
+**Controls:** written authorization for access/security work; data handling agreement; temporary least-privilege access; change approval; timesheet integrity; IP/licensing terms; confidentiality; project separation and evidence retention.
+**Acceptance:** no work before approved scope; milestones/change requests audited; customer acceptance evidence; time/billing reconcile; access revoked at closure; handover docs complete.
+
+### 26.20 Category 20 — IoT, Smart Systems & Connected Infrastructure
+**Product families:** device registry/provisioning; MQTT/connectivity; telemetry; fleet management; smart building/industrial/fleet; digital twins; automation; firmware/OTA.
+**Functional scope:** secure device onboarding/identity; certificates/keys; device shadow/twin; MQTT topics/ACLs; telemetry schemas; command/control acknowledgement; fleet grouping; connectivity status; firmware versions/staged rollout; OTA signing/rollback; rules/automation; simulator; device health/battery/network; inventory/decommissioning.
+**Controls:** unique device identity; secure boot/firmware verification where supported; credential rotation/revocation; topic isolation; command authorization; replay protection; canary OTA/rollback; ownership/consent; protect location/industrial data.
+**Acceptance:** unauthorized devices cannot publish/subscribe/command; OTA signatures verified; failed rollout recovers; decommission revokes credentials; stale telemetry visible; simulator labelled and isolated.
+
+### 26.21 Category 21 — Digital Trust, Compliance & Identity
+**Product families:** IAM/SSO/MFA; OAuth/OIDC/SAML federation; identity verification integrations; PKI/certificate lifecycle; digital signatures; consent/privacy; compliance evidence/vendor risk.
+**Functional scope:** identity lifecycle; federation/trust configuration; MFA enrollment/recovery; session/device management; access requests/approvals; role reviews; service accounts; SCIM where supported; signing/verification; key/certificate lifecycle; consent capture/withdrawal; data-subject requests; policy/evidence mapping; vendor risk; audit exports.
+**Controls:** phishing-resistant MFA where supported; secure recovery; session revocation; least privilege; key custody boundaries; signature/trusted timestamp evidence; consent purpose/version; data minimization; legal basis/retention; no unsupported assurance/certification claims.
+**Acceptance:** revoked identity loses access per policy; MFA recovery resists takeover; federation maps least privilege; signatures validate against trust material; consent withdrawal propagates; evidence traces to source/date.
+
+### 26.22 Category 22 — Licensing, Software Distribution & Digital Products
+**Product families:** software marketplace; license issue/activation/validation; seat/subscription entitlement; private downloads; package/container registries; publisher onboarding; software updates.
+**Functional scope:** publisher/artifact onboarding; malware/vulnerability/signature/SBOM checks; release/version/channel; license types (named user, seat, device, subscription, perpetual, trial, offline where permitted); activation/deactivation/transfer; grace/offline validation; entitlement/usage; download authorization; package repositories/access tokens; update notices; rollback/revocation; refund/cancellation and publisher settlement where applicable.
+**Controls:** artifact provenance/signing; anti-abuse without invasive fingerprinting; token protection; publisher rights/distribution authorization; vulnerability response/takedown; supply-chain policy; offline revocation limitations; export/privacy.
+**Acceptance:** tampered/unsigned artifacts rejected per policy; seats cannot exceed entitlement unless approved; offline revocation limits disclosed; package access scoped; version/publisher traceable; refunds reconcile with entitlement.
+
+### 26.23 Cross-category integration and dependency contracts
+Model dependencies explicitly: identity/org/project/IAM; catalog/pricing/quote/order/payment/billing/subscription/entitlement; provisioning/workflow/provider adapters/resource registry; DNS/domains/certificates/network/compute/containers/databases/storage/email/communications/media/observability/security; secrets/KMS/audit/notification/support/policy; source-evidenced usage/metering/cost/analytics; approved API/SDK/webhook/sandbox contracts. For each dependency define owner, contract/version, provisioning order, readiness condition, failure behavior, retry, compensation, deletion order and test evidence. Avoid circular dependencies and duplicate sources of truth.
+
+### 26.24 Category implementation package and exit gate
+Before a category enters implementation its package must include: approved scope and product/SKU breakdown; requirements register with IDs and provenance; customer/staff journeys; state machine; configuration schema and entitlement matrix; data model/tenant boundaries; API/event/provider contracts; provider capability/region/contract matrix; UX flows and responsive states; threat model/abuse cases; pricing/billing/metering; runbooks/support model; test plan and measurable acceptance; customer and operator docs; dependency map; rollout/rollback/migration/deletion plan; explicit approvals and unresolved-risk register.
+A category is DONE only when implementation, tests, provider/sandbox evidence, security review, operational readiness, documentation and user acceptance gates pass. UI existence or HTTP 200 is not proof. Use DONE / PARTIAL / BLOCKED / MISSING / BROKEN / NEEDS VERIFICATION.
