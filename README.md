@@ -191,3 +191,6 @@ See [Competitive Pricing Benchmark Matrix](docs/COMPETITOR_PRICING_BENCHMARK_MAT
 ## SKU-level competitive pricing — Wave 01
 
 See [SKU-Level Competitive Pricing Analysis, Wave 01](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) for deeper SKU comparisons across Categories 01 (Domains/DNS), 02 (Hosting/Compute) and 09 (SMS/WhatsApp). It includes Tanzania competitor tiers, provisional TEKORA target ranges, SKU catalogue, free-entry rules and outstanding commercial gates. These ranges are not approved retail prices and must pass supplier-cost, tax, legal and margin approval.
+
+
+Wave 01 research evidence and limitations are recorded in [SKU Pricing Wave 01 Research Report](docs/reports/2026-11-26-SKU-PRICING-WAVE-01-REPORT.md).
