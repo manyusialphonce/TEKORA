@@ -119,3 +119,9 @@ The Waves are research snapshots and provisional hypotheses. Public retail price
 ## 10. Explicit non-authorizations
 
 This document does not authorize live payments, control-number collection, money custody, payouts, domain registration, carrier connectivity, sending bulk messages, issuing identity certificates, security testing against third parties, production cloud spend, or customer-facing price publication.
+
+## 11. Research document precedence and OpenCode navigation
+
+For Categories 03–22, `SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md` is the detailed consolidated research source and includes the broader SKU families, monetization models, benchmark signals, free policy, gates and source list. `SKU_LEVEL_COMPETITIVE_PRICING_WAVE_02.md` (03–08) and `SKU_LEVEL_COMPETITIVE_PRICING_WAVE_03.md` (10–22) are focused summaries prepared for quick navigation; they do not supersede or replace the consolidated document. For 01/02/09, use Wave 01. If a summary differs from the consolidated evidence, flag the discrepancy and use the detailed source pending owner review.
+
+For first-session setup, follow `docs/OPENCODE_START_HERE.md` and the `/tekora-start` command. Do not skip Phase 00 audit or the explicit phase approval gate.
