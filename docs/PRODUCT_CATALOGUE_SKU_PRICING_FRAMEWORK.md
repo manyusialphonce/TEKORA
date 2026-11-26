@@ -315,3 +315,10 @@ A category/SKU is not ready for sale until:
 - Price is versioned, approved and effective-dated.
 
 **Status by category:** pricing architecture requirements are now defined for all 22 categories. Public benchmark research is PARTIAL, not a complete 3–5-provider comparison for every SKU. No TEKORA final customer-facing retail price is approved by this addendum.
+
+
+## 10. All-category competitor pricing benchmark matrix
+
+The additive [Competitive Pricing Benchmark Matrix](COMPETITOR_PRICING_BENCHMARK_MATRIX.md) translates this framework into a first-pass benchmark and monetization matrix for all 22 categories. It records public price anchors, category-specific billing units, provisional TEKORA positioning, free-to-paid paths, evidence grades, unit-economics and approval requirements, and unresolved provider/legal/commercial blockers. It does not replace this framework or approve customer-facing prices. Treat public competitor prices as E1 evidence only; obtain supplier quotes and E3–E5 validation before approval. The research record is in [the 26 November 2026 report](reports/2026-11-26-COMPETITOR-PRICING-MATRIX-RESEARCH.md).
+
+**Status: PARTIAL / DISCOVERY.** All 22 categories are mapped, but SKU-level comparable depth, supplier wholesale costs, FX/tax treatment, margin floors, free quotas and commercial approvals remain outstanding.
