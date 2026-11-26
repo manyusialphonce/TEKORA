@@ -1197,3 +1197,14 @@ The addendum adds shared navigation, screen IDs and acceptance expectations for 
 All prior requirements, 22 category definitions, proposals, decisions, limitations and unresolved items remain in force. The addendum is additive and versioned. Do not delete a requirement because it is not selected for MVP. Do not mark work DONE without inspectable evidence.
 
 **Status: PARTIAL / PROPOSED.** Parent IDs and discovery baselines are added; child-level traceability, provider E2–E5 evidence, legal classification, approved SKU/MVP decisions, final ERD/OpenAPI/AsyncAPI, prototypes, usability evidence, executable tests and formal phase approvals remain outstanding. Application implementation remains NOT STARTED and NOT AUTHORIZED.
+
+
+---
+
+## 33. Developer Free Domain & Preview Environment Program
+
+The additive specification in `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` records the user-requested free-domain capability for junior developers, students, freelancers and project builders. Preserve this as a first-class cross-category product spanning Domains/DNS (CAT-01), Hosting/Compute (CAT-02), Developer Tools/API (CAT-11), DevOps/Deployment (CAT-12), Cybersecurity (CAT-13), Observability (CAT-14) and Developer Hub/Business Applications as applicable. It defines free managed subdomains, DNS/TLS lifecycle, optional deployment targets, eligibility, abuse/takedown/appeal, tenant isolation, expiry/quarantine, API/events, cost controls, UX and acceptance tests.
+
+**Important distinction:** free hostname/subdomain does not mean free registrable domain, hosting, compute, database, email, bandwidth or SLA. Example suffixes are illustrative only. Do not promise a suffix until TEKORA ownership/control and provider/registry terms are verified. Prefer a dedicated registrable domain for untrusted preview content to isolate it from account/staff origins; security review must approve the final trust boundary. Wildcard DNS must be paired with an active-hostname allowlist and must not route arbitrary unallocated names.
+
+Proposed traceability additions: PLT-025; CAT-01-FN-001; CAT-01-SEC-001; CAT-02-FN-001; CAT-11-FN-001; CAT-12-FN-001; CAT-13-SEC-001; CAT-14-OPS-001; CAT-18-COM-001. These are PROPOSED and require child decomposition, cost/provider/legal validation, MVP scoring and approval. The full specification is mandatory reading before implementing this capability. No implementation or launch is claimed.
