@@ -856,3 +856,253 @@ Model dependencies explicitly: identity/org/project/IAM; catalog/pricing/quote/o
 ### 26.24 Category implementation package and exit gate
 Before a category enters implementation its package must include: approved scope and product/SKU breakdown; requirements register with IDs and provenance; customer/staff journeys; state machine; configuration schema and entitlement matrix; data model/tenant boundaries; API/event/provider contracts; provider capability/region/contract matrix; UX flows and responsive states; threat model/abuse cases; pricing/billing/metering; runbooks/support model; test plan and measurable acceptance; customer and operator docs; dependency map; rollout/rollback/migration/deletion plan; explicit approvals and unresolved-risk register.
 A category is DONE only when implementation, tests, provider/sandbox evidence, security review, operational readiness, documentation and user acceptance gates pass. UI existence or HTTP 200 is not proof. Use DONE / PARTIAL / BLOCKED / MISSING / BROKEN / NEEDS VERIFICATION.
+## 27. Second-pass category depth audit and product engineering requirements
+
+### 27.1 Why this second pass is mandatory
+
+Section 26 provides an implementation-oriented baseline, but its category entries are not yet detailed product specifications for every possible offer. They intentionally do not invent vendor-specific APIs, final prices, legal authority, provider coverage, exact SLAs or implementation decisions. Before a category is authorized for build, the team must perform the deeper product engineering analysis below. Do not interpret inclusion in the catalog as a promise that every capability launches in the first release.
+
+### 27.2 Required product decomposition for every category
+
+Each category must be decomposed into independently understandable product capabilities and customer-facing offers. For every candidate product, record:
+- Product name and stable product ID; category/subcategory; short customer-facing description; target customer segment and primary use case.
+- Core capability, optional capabilities, add-ons, exclusions, prerequisites and dependencies.
+- Delivery type: TEKORA-owned software/service; TEKORA-operated infrastructure; third-party integrated service; authorized reseller; partner-delivered service; customer-managed resource. Record the legal/commercial evidence required for each.
+- Service boundary and responsibility matrix: what TEKORA operates, what the upstream provider operates, what the customer configures, who handles support and who owns incident communication.
+- Availability model: countries/regions, currencies, languages, supported customer types, provider coverage, restrictions and explicit unsupported cases.
+- Plan/SKU design: billing unit, included allowance, overage, quotas, burst limits, upgrade/downgrade behavior, trial/sandbox eligibility, renewal and cancellation.
+- Provisioning method: automated API, event-driven workflow, infrastructure-as-code, operator-assisted, provider portal/manual or customer self-service; label manual operations honestly.
+- Customer lifecycle and operator lifecycle, including states, transition guards, retries, timeouts, compensation, recovery and irreversible actions.
+- Required data, source of truth, ownership, retention, deletion/export, residency and audit evidence.
+- Dependencies and failure propagation; degraded mode, retry, manual intervention and customer communication.
+- Security classification, permission model, threat scenarios, abuse controls, compliance dependencies and approval requirements.
+- Test evidence, measurable acceptance criteria, support documentation, runbooks, known limitations and change/deprecation policy.
+
+### 27.3 Category-specific deeper product decomposition
+
+These are candidate product workstreams to investigate and validate, not commitments that all will be launched or that every upstream provider supports them.
+
+#### Category 01 — Domains, DNS & Internet Services
+- Domain portfolio: search, watchlists, availability checks, registration, transfer, renewal, ownership/contact verification, registrant change, lock, privacy eligibility, expiry recovery and multi-domain bulk operations.
+- DNS control: zones, records, templates, bulk changes, import/export, record validation, propagation checks, version history, approval, staged changes and rollback.
+- Advanced DNS: DNSSEC, GeoDNS, weighted/latency routing, health-based failover, private DNS and multi-provider management where supported.
+- Internet identity and security: RDAP lookup, WHOIS fallback where lawful, reverse DNS, IP/ASN/CIDR inventory, reputation, DNS security posture and email-domain authentication diagnostics.
+- Certificate and edge lifecycle: certificate discovery, issuance/renewal integrations, expiry alerts, CDN/edge onboarding and origin protection.
+- Migration and protection: registrar/DNS migration, preflight checks, TTL planning, cutover, post-cutover checks, rollback plan, typosquat/brand-abuse watch and domain recovery workflows.
+- Resolve product boundaries: domain registrar versus reseller/referral; DNS operator versus DNS control-plane integrator; certificate authority versus ACME/CA integration; IP intelligence source versus authoritative allocation data.
+
+#### Category 02 — Web Hosting, Application Hosting & Compute
+- Hosting offers: shared, reseller, managed CMS, static site, application runtime, VPS, dedicated/bare-metal and managed application deployment.
+- Runtime lifecycle: supported language/runtime versions, buildpacks or images, build/start commands, environment configuration, process model, health checks, logs, shell access and scheduled jobs.
+- Website lifecycle: domain binding, TLS, redirects, staging, clone, deployment, backup, restore, migration, traffic management and content/runtime updates.
+- Compute lifecycle: image catalogue, instance sizing, storage/network attachment, resize, reboot, rebuild, snapshot, firewall, rescue/recovery and decommission.
+- Resource governance: CPU/RAM/I/O/process/inode/storage/bandwidth/database limits, burst policy, noisy-neighbour isolation, suspension and abuse review.
+- Clarify what is a hosting plan versus a managed service, what control panel or runtime is used, and which customer actions are self-service versus operator-only.
+
+#### Category 03 — Cloud Infrastructure & Virtualization
+- Compute products: virtual machines, bare metal, GPU instances if actually available, images, instance groups and autoscaling.
+- Network products: VPC/project networks, subnet, route, gateway, NAT, public IP, security group and load balancer.
+- Storage products: block volumes, snapshots, images and object-storage integration, with clear ownership and backup boundaries.
+- Infrastructure operations: provisioning, resize, stop/start, rebuild, migration, HA topology, maintenance, quota and resource inventory.
+- Governance: policy templates, region restrictions, tagging, cost allocation, drift detection, change plans and approval for destructive/public resources.
+- Distinguish cloud broker/control plane from infrastructure operator; disclose upstream region, availability, data residency and egress pricing.
+
+#### Category 04 — Containers, Kubernetes & Runtime
+- Registry: private/public repository, image push/pull, tags/digests, retention, access token, signing, scanning and replication.
+- Application runtime: container app, job, scheduled job, environment, scaling, health, logs, rollout and rollback without requiring a full cluster for simple workloads.
+- Kubernetes: managed cluster, node pool, namespace, workload, service, ingress, storage, autoscaling, upgrade and backup/restore.
+- Delivery: Helm chart, GitOps source, deployment approval, progressive rollout and drift reconciliation.
+- Governance: RBAC, network policy, resource quota, admission policy, image provenance, secret handling, cluster version lifecycle and cost visibility.
+- Define the boundary between platform-as-a-service container runtime and customer-managed Kubernetes control.
+
+#### Category 05 — Networking & Connectivity
+- Network inventory and IPAM: address pools, subnet/CIDR planning, allocation, reservations, conflict detection, DNS/reverse DNS links and audit.
+- Connectivity: site-to-site and client VPN, private links, peering, VLAN, virtual network, routing, NAT and gateway products.
+- Traffic management: load balancing, health probes, bandwidth/QoS, traffic shaping and DDoS/provider integrations.
+- Network operations: topology, config backup, change approval, reachability tests, latency/loss/throughput, tunnel lifecycle and incident diagnostics.
+- Wireless/SD-WAN scope must be separately approved and must not silently absorb the independent Wi-Fi management project.
+- Define which network equipment and connectivity services TEKORA owns, remotely manages, resells or merely monitors.
+
+#### Category 06 — Database Services
+- Managed database products by engine, version, region, topology and support tier; avoid promising engines not validated with a provider.
+- Provisioning: instance/cluster, database, user, role, network access, TLS, parameter configuration and connection information.
+- Availability: replicas, read endpoints, failover, maintenance, upgrade, scaling, connection pooling and planned migration.
+- Data protection: automated backups, PITR, snapshots, export/import, restore drills, retention and deletion.
+- Operations: query insights, slow-query diagnostics, connection/storage monitoring, capacity warnings and support escalation.
+- Separate database hosting from database administration/consulting; define customer responsibility for schema, queries, patching and data correctness.
+
+#### Category 07 — Storage, Backup & Disaster Recovery
+- Storage products: object, block, file, archive, S3-compatible access, lifecycle tiers and transfer tools.
+- Protection policies: schedule, frequency, retention, immutability, encryption, replication, legal hold and deletion.
+- Recovery products: file/object restore, volume restore, database restore, application recovery, cross-region recovery and full environment recovery.
+- DR planning: dependency map, runbook, recovery sequence, RTO/RPO target, test schedule, evidence and exception reporting.
+- Storage operations: capacity, egress, API/request costs, replication lag, integrity checks and access review.
+- Distinguish backup storage from independently recoverable backup service; define whether restore assistance is included or billable.
+
+#### Category 08 — Email Infrastructure
+- Mail hosting: domain onboarding, mailbox, alias, distribution group, forwarding, quota, migration and lifecycle administration.
+- Transactional delivery: API/SMTP, templates, sender identity, event delivery, bounce, complaint, suppression and analytics.
+- Campaign delivery: list consent, segmentation, scheduling, unsubscribe, suppression and policy enforcement, subject to applicable law and provider terms.
+- Email security: SPF, DKIM, DMARC, MTA-STS, TLS-RPT, inbound filtering, anti-spoofing and domain posture monitoring.
+- Deliverability operations: reputation signals, queue health, throttling, bounce classification, warm-up guidance and provider escalation.
+- Define retention, archive, mailbox backup, discovery and customer access boundaries; never imply guaranteed inbox placement.
+
+#### Category 09 — SMS, Voice & Omnichannel Communication
+- Messaging: SMS, OTP, transactional, bulk/campaign, templates, sender IDs, delivery receipts and scheduled delivery.
+- Voice: inbound/outbound calls, virtual numbers, IVR, routing, call status, recordings and call analytics where provider and law permit.
+- Digital channels: WhatsApp Business and push or other channels only after provider approval, template and policy validation.
+- Platform features: unified API, provider selection, routing, fallback, retries, idempotency, webhook events, suppression and usage reporting.
+- Fraud and compliance: OTP abuse, SMS pumping, toll fraud, consent, opt-out, sender registration, destination restrictions and rate controls.
+- Disclose that channel availability, sender identity, delivery receipts and fallback behavior differ by provider and country.
+
+#### Category 10 — Payment Infrastructure, Billing & Fintech Integrations
+- Payment acceptance: provider/channel/currency catalogue, hosted checkout, payment intent, status verification, refunds and reversals.
+- Billing: quote, order, invoice, tax/fee treatment, receipt, credit note, subscription, renewal, proration, dunning, usage billing and account balance ledger.
+- Control numbers: allocation, unique reference mapping, validity period, expiry, renewal, cancellation, payment matching, duplicate detection, partial/under/overpayment and unmatched reconciliation where the collection provider supports it.
+- Finance operations: settlement imports, gross/fee/net reconciliation, provider reports, bank statement matching, exception queues, adjustment approvals and audit.
+- Provider integration: capability matrix, sandbox/live separation, credentials, signed webhook verification, polling fallback, idempotency and outage handling.
+- Distinguish payment state, invoice state, order state, subscription state, control-number state and settlement state. Never collapse them into one status.
+- Tanzania-specific legal, tax, mobile-money, bank and control-number pathways require current verification with relevant authorities/providers before commercial launch. No claim of licensed payment processing, custody or government collection authority without proof.
+
+#### Category 11 — Developer Tools & API Infrastructure
+- API product lifecycle: draft, review, publish, version, deprecate, retire and access policy.
+- Developer workspace: organizations, projects, apps, environments, credentials, scopes, quotas, usage and billing.
+- API operations: gateway routing, auth, rate limits, request validation, observability, error contracts and version compatibility.
+- Webhooks/events: subscriptions, signing, delivery attempts, retries, dead-letter, replay, filtering and test console.
+- Developer tooling: API explorer, collections, environment variables, CLI, SDKs, sample apps, changelog, status and migration guides.
+- Sandbox: isolated credentials/data, seeded scenarios, simulated responses clearly labelled, reset and deterministic test fixtures.
+- AI assistant: retrieval from approved API docs/schema only, citations to source versions, no invented endpoints and safe handling of user secrets.
+
+#### Category 12 — Software Development, DevOps & Deployment
+- Source integrations: repository authorization, installation scope, webhook events, branch and environment protection.
+- Build system: pipelines, runners, caches, artifacts, test reports, dependency scanning and build provenance.
+- Deployment: preview, development, staging, production, rollout strategies, health gates, rollback and release history.
+- Infrastructure delivery: IaC plan/apply, state protection, policy checks, drift, approval and secret injection.
+- Supply chain: SBOM, signed artifacts, dependency/license scanning, provenance and vulnerability response.
+- Operations: runner capacity/isolation, build minutes, deployment audit, failed pipeline diagnostics, cost and quota.
+- Clarify whether TEKORA hosts runners/build infrastructure or orchestrates third-party CI/CD providers.
+
+#### Category 13 — Cybersecurity & Information Security
+- Assessment services: asset discovery, configuration review, vulnerability scanning, web/API/cloud/container testing and security posture reports.
+- Authorized testing: scope approval, rules of engagement, test windows, safe limits, emergency stop, evidence and retest.
+- Protection integrations: WAF, DDoS, endpoint, identity, SIEM and cloud security posture where provider-supported.
+- Managed security operations: alert triage, incident case, containment recommendation/approval, evidence chain, recovery coordination and post-incident review.
+- Governance: risk register, policies, security awareness, vendor risk, audit evidence and remediation tracking.
+- Distinguish advisory, assessment, managed detection and response, tool integration and formal certification; never imply one is another.
+
+#### Category 14 — Monitoring, Observability & SRE
+- Telemetry products: metrics, logs, traces, profiles, synthetic checks, uptime and real-user monitoring where privacy permits.
+- Monitoring lifecycle: agent onboarding, integration health, alert policy, routing, escalation, silence, maintenance and decommission.
+- Incident operations: detection, acknowledgement, assignment, timeline, customer communication, status page, resolution and postmortem.
+- Reliability: SLIs, SLOs, error budgets, availability windows, capacity forecasting and dependency mapping.
+- Cost/data governance: retention tiers, sampling, cardinality controls, ingestion quotas, PII scrubbing and tenant isolation.
+- Differentiate observed provider availability from contractual SLA and from TEKORA's own service commitment.
+
+#### Category 15 — AI, ML & Automation Infrastructure
+- Model access: provider/model catalogue, capability metadata, regional availability, context limits, modality, pricing and retention terms.
+- Inference: API gateway, keys, routing, quota, streaming, retries, fallback compatibility and usage metering.
+- Knowledge systems: embedding models, vector indexes, document ingestion, chunking, retrieval permissions, freshness and deletion propagation.
+- Model lifecycle: datasets, training/fine-tuning jobs, model registry, evaluation, deployment, monitoring and rollback.
+- Agent/workflow platform: tool registry, permissions, approval steps, execution logs, retries, budgets and human handoff.
+- Governance: prompt/model versioning, safety evaluation, data leakage, prompt injection, provider retention, provenance and user disclosure.
+- Do not imply model output is guaranteed accurate; provide source grounding and confidence/limitations where appropriate.
+
+#### Category 16 — Media, Video & Realtime Infrastructure
+- Media management: upload, resumable transfer, metadata, processing queue, transformations, transcoding and asset lifecycle.
+- Delivery: VOD/live, HLS/DASH, origin, CDN, signed playback, access policy and QoE analytics.
+- Realtime: WebRTC signaling, STUN/TURN/SFU provider, room lifecycle, participants, permissions, presence and chat.
+- Recording and intelligence: recording consent, storage, retention, transcription, captions, search and export.
+- Operations: bandwidth/egress, transcoding queue, regional performance, concurrency, recording failure and recovery.
+- Define which features are TEKORA-operated versus provider-backed; recording defaults and retention must be explicit.
+
+#### Category 17 — Data Engineering & Analytics
+- Data movement: connectors, ingestion, batch, stream, CDC, schedules, checkpoints and backfills.
+- Transformation: SQL/code transformations, versioning, dependency graph, tests, data contracts and schema evolution.
+- Storage/compute: warehouse/lake/lakehouse options, partitioning, retention and cost controls.
+- Governance: catalogue, lineage, classification, masking, access, consent/purpose, retention and deletion propagation.
+- Quality/operations: freshness, completeness, validity, anomaly, pipeline failures, replay and incident ownership.
+- Analytics: governed datasets, dashboards, exports, semantic metrics and role-based reporting.
+- Define source-of-truth and freshness for every metric; distinguish observed facts from derived estimates.
+
+#### Category 18 — Business Applications & Digital Productivity
+- Application catalogue: TEKORA-built apps, third-party SaaS, managed open-source deployments and partner offers clearly distinguished.
+- Business domains: CRM, ERP/finance, HRM, project/work management, collaboration, document management, forms/workflows and e-commerce.
+- Tenant lifecycle: trial, provision, configuration, user/seat assignment, integration, update, backup, migration and offboarding.
+- Marketplace governance: publisher verification, permissions disclosure, pricing, reviews, update policy, vulnerability response and retirement.
+- Cross-app experience: SSO, organization directory, integration catalogue, sync monitoring, shared audit and reporting.
+- Define data ownership/export and support responsibility when third-party apps are involved.
+
+#### Category 19 — IT Consulting, Managed IT & Professional Services
+- Commercial funnel: lead, discovery, qualification, scope, proposal, quotation, contract, purchase order and kickoff.
+- Delivery: project plan, milestones, staffing, timesheets, risks, dependencies, change requests, deliverables and acceptance.
+- Managed service: service catalogue, onboarding, asset inventory, support hours, severity, SLA evidence, escalation and monthly review.
+- Technical engagement: access authorization, change window, backup, implementation, testing, handover and rollback.
+- Finance: milestone/retainer billing, approved expenses, time reconciliation, renewals and contract closure.
+- Define IP ownership, confidentiality, subcontracting, warranties, exclusions and customer responsibilities in approved contracts.
+
+#### Category 20 — IoT, Smart Systems & Connected Infrastructure
+- Device lifecycle: manufacture/claim/onboard, identity, certificate, provisioning, ownership transfer, maintenance and decommission.
+- Connectivity and messaging: MQTT/broker, topic ACL, cellular/Wi-Fi/LPWAN integrations, offline buffering and command acknowledgement.
+- Device management: fleet inventory, configuration, telemetry, health, firmware, staged OTA, rollback and remote diagnostics.
+- Applications: smart building, industrial monitoring, fleet/asset tracking and automation, each with separate safety and domain analysis.
+- Digital twin/rules: state model, telemetry mapping, alerts, automation, simulator and audit.
+- Safety: command allowlists, fail-safe states, human override, secure update, physical impact assessment and incident procedure.
+- Avoid implying functional safety certification or guaranteed connectivity without evidence.
+
+#### Category 21 — Digital Trust, Compliance & Identity
+- Identity: workforce/customer IAM, SSO federation, MFA, lifecycle, access requests, privileged access and service identities.
+- Verification: provider-integrated identity/business checks with assurance level, source, jurisdiction and limitations visible.
+- Trust infrastructure: PKI, certificate lifecycle, key management integrations, signing and verification.
+- Privacy: consent records, preference management, data-subject requests, retention, export and deletion workflows.
+- Governance: access reviews, policy mapping, evidence collection, vendor risk, audit trails and control ownership.
+- Separate identity proofing, authentication, authorization, electronic signature and legal trust services; they are not interchangeable.
+
+#### Category 22 — Licensing, Software Distribution & Digital Products
+- Publisher lifecycle: application onboarding, ownership rights, security review, release approval, support details and retirement.
+- Distribution: private/public downloads, package registries, version channels, access tokens, mirrors and release notes.
+- Licensing: trial, subscription, perpetual, named user, seat, device, floating/concurrent and offline entitlement only where legally and technically supported.
+- Activation lifecycle: issue, activate, deactivate, transfer, renew, grace, revoke, offline validation and recovery.
+- Supply chain: SBOM, dependency/license policy, artifact signing, provenance, malware scanning, vulnerability notification and takedown.
+- Commercial: pricing, seat changes, renewals, refunds, publisher settlement and entitlement reconciliation.
+- Define offline revocation limitations, customer privacy and anti-tamper boundaries clearly.
+
+### 27.4 Cross-category product and platform consistency checks
+
+Before approving any category specification, verify the following platform-wide contracts:
+- One customer/org/project/resource ownership model, with explicit personal versus organization ownership and delegated administration.
+- One identity and authorization model, with role/permission scopes, resource ownership checks, service identities, session security and audit.
+- One product catalogue and offer model, separating technical product capability from commercial SKU, plan, region and provider availability.
+- One order and provisioning orchestration model, with idempotency, state transitions, compensation, manual exception handling and reconciliation.
+- Separate but linked order, payment, invoice, subscription, entitlement, usage, control-number and settlement records.
+- One provider adapter contract that records capabilities, regions, currencies, rate limits, authentication, sandbox/live status, webhook support, outages and contract dependencies without flattening provider-specific behavior.
+- One secrets and key-management policy; no credentials in logs, docs, source control, analytics or support tickets.
+- One notification/event model with consent, preferences, delivery status, retries, suppression and audit.
+- One support/incident model linking customer, service, resource, provider, severity, timeline, communication and resolution evidence.
+- One metering contract that records source, unit, interval, aggregation, correction, late data, estimate versus actual, price version and dispute process.
+- One audit/event retention policy and export process appropriate to data class and legal requirements.
+- Consistent localization for Swahili and English, TZS and other supported currencies, Africa/Dar es Salaam timezone defaults where appropriate, and explicit UTC storage for timestamps.
+- No public product page may imply availability, SLA, certification, reseller status or regional support that has not been verified.
+
+### 27.5 Mandatory failure and edge-case analysis
+
+Every product must analyse at least: duplicate requests; delayed/out-of-order events; provider timeout after successful upstream action; provider outage; rate limiting; expired/rotated credentials; partial provisioning; resource already exists; quota/capacity exhaustion; customer cancellation during provisioning; payment success with delayed webhook; payment reversal after entitlement activation; renewal failure; plan downgrade with excess usage; data export/deletion; migration interruption; backup corruption; restore failure; security incident; tenant boundary violation; manual operator correction; and provider contract termination. Add domain-specific cases beyond this baseline.
+
+### 27.6 Product prioritization and release classification
+
+Every candidate product is classified as:
+- **Core platform capability:** necessary shared capability for multiple categories.
+- **MVP candidate:** essential to validate the platform's first coherent customer journey; must have rationale and measurable outcome.
+- **Launch expansion:** valuable but not required for first controlled release.
+- **Advanced/enterprise:** requires more complex scale, compliance, integration or operating model.
+- **Partner-dependent:** cannot launch until provider authorization, contract, technical access and support path are confirmed.
+- **Deferred/unsupported:** intentionally excluded for now with rationale, customer impact and reconsideration trigger.
+
+Prioritization must consider customer value, demand evidence, strategic fit, technical complexity, operational burden, gross margin/cost exposure, provider dependency, legal/regulatory risk, security impact, time-to-validate and cross-category leverage. Do not prioritize only by implementation ease or feature count. Keep the complete long-term catalogue visible while clearly communicating what is actually available.
+
+### 27.7 Evidence and completion standard
+
+Each category must maintain a traceability matrix linking user-originated idea, approved requirement, product/SKU, workflow, UI screen, API/event, data entity, permission, provider dependency, test case, documentation and acceptance evidence. Proposed enhancements must be labelled as proposals; externally dependent facts must cite current authoritative provider/regulator documentation during the relevant phase. A document update alone does not complete research or implementation. Mark each line item DONE only with inspectable evidence; otherwise use PARTIAL, BLOCKED, MISSING, BROKEN or NEEDS VERIFICATION.
+
+### 27.8 Second-pass audit outcome
+
+**Status: PARTIAL — deeper category product discovery required.** All 22 categories have a structured baseline in Section 26 and deeper candidate decomposition in Section 27. However, the final SKU catalogue, country/provider capability matrix, legal validation, detailed state machines, API contracts, data schemas, price books, SLA commitments and measurable per-product acceptance criteria remain discovery deliverables. This is intentional: they must be verified and approved rather than fabricated. No implementation phase is authorized by this section.
