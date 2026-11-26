@@ -257,3 +257,7 @@ Preserve `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` as an additive requirement. Do 
 ## Mandatory pricing/catalogue context for OpenCode
 
 Before any catalogue, checkout, billing, metering, quote, subscription or pricing implementation, read `docs/MASTER_SKU_PRICING_CATALOGUE.md` and all three SKU Pricing Waves. Preserve all 22 categories and all existing requirements. Treat public prices and target bands as provisional evidence, never as approved TEKORA prices or supplier costs. Do not activate provider integrations, publish prices, charge real funds, use control numbers, incur production spend or promise SLAs without explicit approval and validated contracts. Follow the catalogue's required SKU data contract, commercial status vocabulary, versioned price book, immutable snapshots, idempotent metering, hard quotas, explicit paid opt-in and acceptance tests.
+
+## Canonical OpenCode bootstrap
+
+Use `docs/OPENCODE_START_HERE.md` as the single entry point and run `/tekora-start` for the first session. The first session is a read-only Phase 00 audit, not implementation. For categories 03–22, the detailed research source is `docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md`; Wave 02 and Wave 03 are category-focused summary companions. Do not treat duplicate summaries as independent approvals or replace the consolidated evidence with a shorter summary.
