@@ -17,3 +17,6 @@ Implement the smallest complete vertical slice that satisfies the approved requi
 Never spend money, create paid resources, register domains, modify production DNS, send real customer messages, process real payments, deploy publicly, change permissions or delete production data without separate explicit approval.
 
 After implementation run formatting, lint/type/compiler checks, unit/integration/contract/E2E tests relevant to the change, security checks and diff review. Record exact commands and truthful outcomes. Update README, Blueprint requirement status and a dated report under docs/reports/. Do not mark a feature DONE when tests or required evidence are missing. Do not merge, push or release unless explicitly included in the approval.
+
+
+For any pricing/catalogue/billing/metering work, read `docs/MASTER_SKU_PRICING_CATALOGUE.md`, Wave 01 and the detailed consolidated Waves 02–04 document before editing. Wave 02/03 are summaries, not authoritative substitutes. Confirm the approved phase and bounded work package; no approval means stop.
