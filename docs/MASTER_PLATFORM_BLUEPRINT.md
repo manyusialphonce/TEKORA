@@ -1226,3 +1226,16 @@ OpenCode project configuration is maintained in `opencode.json`; repeatable proj
 Technical stack options in the Decision Register are PROPOSED until the owner approves them. The existence of this section does not authorize application scaffolding, dependency installation, provider onboarding, domain registration, DNS changes, cloud spend, live payments, external customer communications or public launch.
 
 All implementation remains phase-based. The first OpenCode task is a read-only Phase 00 repository audit. Phase reports belong in `docs/reports/`; README records actual repository state; this Blueprint records intended/approved product scope. No category or prior requirement may be removed as a shortcut.
+
+
+## Section 35 — Mandatory platform-wide pricing, competitive positioning and freemium policy
+
+Pricing and monetization are critical requirements for every one of the 22 service categories, not a later administrative task. The authoritative detailed framework is `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md`, Section 9 and its subsections.
+
+TEKORA must research comparable Tanzania/East Africa and international providers, normalize specifications/allowances/regions/terms, capture dated source evidence, obtain wholesale/provider costs, calculate fully loaded cost and category-level contribution margin, then approve a versioned retail price. The proposed 3–8% undercut applies only where economically viable; parity, premium, usage-based, prepaid, subscription or quote-based pricing may be better for other products. No blanket discount is permitted.
+
+The catalogue must support category-appropriate Free Forever, Freemium, Trial, Promotional Credits, Sandbox, Paid, Pay-as-you-go and Quote models. Free tiers have measurable limits, abuse/cost controls and disclosed end-of-limit behavior. No universal free promise, surprise overage or silent paid trial conversion is allowed. Users can upgrade when they need more capacity/features/support; trial-to-paid requires explicit and valid consent.
+
+Required capabilities include competitor benchmark registry, provider cost quotes, FX snapshots, versioned price books, immutable quote/invoice/subscription snapshots, margin simulation, promotions, free-tier entitlements, budgets/spend caps, pricing approvals, price-change notices and customer-facing disclosure. Separate provider pass-through, TEKORA fee, taxes, payment collection/payout fees and credits.
+
+All 22 category charging dimensions and initial free/paid hypotheses are mapped in the pricing framework. Public benchmark research remains PARTIAL; no TEKORA final customer-facing price, margin, free quota, tax treatment or payment fee is approved until commercial, provider, finance and legal validation.
