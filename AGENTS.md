@@ -228,3 +228,16 @@ Preservation rules:
 ## Mandatory free developer hostname scope
 
 Preserve `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` as an additive requirement. Do not remove or narrow the free subdomain program for junior developers and students. Audit domain ownership, DNS/TLS, tenant isolation, abuse, expiry/quarantine, cost, provider terms and legal obligations before any launch. Free hostname must remain distinct from free hosting or paid registrable domains. No implementation without phase authorization.
+
+
+## OpenCode environment and execution controls
+
+- Read `docs/ENGINEERING_ENVIRONMENT_AND_OPENCODE_RUNBOOK.md`, `docs/TECHNICAL_DECISION_REGISTER.md` and `docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md` before planning or implementing.
+- Use the repository commands `/tekora-audit`, `/tekora-prepare`, `/tekora-implement` and `/tekora-verify` as appropriate.
+- Treat the repository's actual current state as authoritative; earlier reports are snapshots and must be revalidated.
+- The first OpenCode task is a read-only Phase 00 repository audit. Do not create application code, install dependencies or initialize a framework until the required architecture/stack decisions and phase gate are approved.
+- Recommended stack choices in `docs/TECHNICAL_DECISION_REGISTER.md` are PROPOSED, not approved. Do not silently turn them into binding decisions.
+- Implementation must be phase-based, requirement-ID driven, additive and evidence-backed. Keep phase reports under `docs/reports/`.
+- Do not make external changes or incur costs: no domain registration/transfer, production DNS, cloud resources, paid provider plans, live payments/payouts, real SMS/email, public launch or production data operations without separate explicit authorization.
+- Never commit secrets or real personal/customer data. Use isolated local/test environments and synthetic fixtures.
+- Never claim implementation, tests, security, compliance, provider approval or deployment without direct evidence.
