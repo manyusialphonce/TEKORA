@@ -189,3 +189,8 @@ Earlier pricing research remains in [2026-11-26 Pricing & Monetization Research]
 - No category is marked commercially ready solely because a public competitor price was found.
 
 **Overall outcome: PARTIAL.** A first-pass, 22-category benchmark and monetization matrix is documented. Several categories have credible public price anchors; multiple categories remain quote-based or require supplier, legal and operational validation. No TEKORA final retail price, provider partnership, legal eligibility or launch readiness is asserted.
+
+
+## SKU-level detail — Wave 01
+
+The first detailed SKU analysis is available in [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md). It deepens Categories 01, 02 and 09 with multiple Tanzania price observations, SKU-level target hypotheses, chargeable units, renewal/segment handling and approval blockers. This is additive; all 22 categories remain in scope. No proposed range is an approved TEKORA price.
