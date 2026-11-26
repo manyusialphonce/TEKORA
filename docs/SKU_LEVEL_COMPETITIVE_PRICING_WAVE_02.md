@@ -1,6 +1,10 @@
 # TEKORA SKU-Level Competitive Pricing — Wave 02 (Categories 03–08)
 **Snapshot:** 26 November 2026 · **Status:** Provisional research and pricing hypotheses; not an approved price list.
 
+
+> **Document role:** Focused quick-reference summary for Categories 03–08. The detailed consolidated research source for Categories 03–22 is `SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md`. Read that source before implementation or commercial decisions. This summary does not supersede it.
+
+
 ## 03 — Cloud Infrastructure & Virtualization
 **Tanzania public anchors:** Moinfo: 1 GB/25 GB/1 TB TZS 19,500/mo; 2 GB/50 GB/2 TB TZS 47,000; 4 GB/80 GB/4 TB TZS 94,000; 8 GB/160 GB/5 TB TZS 187,500; 16 GB/320 GB/8 TB TZS 374,500 (https://moinfo.co.tz/vps). Mamdali: 1 GB/25 GB/1 TB TZS 35,000; 2 GB/50 GB/2 TB TZS 45,000; 4 GB/80 GB/4 TB TZS 60,000 (https://mamdali.co.tz/vps-hosting/). Continuum: cloud tiers from TZS 60,000 for 4 GB/50 GB/4 TB, TZS 100,000 for 8 GB/100 GB/8 TB, TZS 150,000 for 16 GB/200 GB/16 TB (https://continuum.co.tz/). Lineserve cloud entry from TZS 27,780/month for 1 vCPU, 1 GB, 20 GB SSD and IPv4 (https://www.lineserve.co.tz/pricing).
 | SKU | Spec/unit | Provisional target hypothesis |
