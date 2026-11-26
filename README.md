@@ -120,3 +120,7 @@ This is a documentation reconciliation against the planning context available to
 Blueprint Section 25 records additional requirements from the earliest planning context: secure/feasible technology breadth; connected control-plane engines and service dependencies; organization/project/environment IAM and secrets; developer API/sandbox/webhook/SDK experience; safe automated provisioning; provider abstraction and realistic failover/portability; full internal operations and professional-service project tracking; commercial and Tanzania localization requirements; and candidate differentiators such as visual infrastructure mapping, AI diagnostics, cost optimization and automation.
 
 These are not all approved MVP features. Explicit requirements, assistant proposals and pending validation remain separately classified. Implementation must not start until the traceability and approval gate in Blueprint Section 25.11 is satisfied.
+
+## Category implementation depth
+
+The authoritative Blueprint now includes Section 26, an implementation-oriented specification for each of the 22 service categories. It defines product families, functional scope, workflows, data/integration boundaries, security/operations and acceptance expectations, plus an 18-point mandatory specification contract, cross-category dependency rules and category implementation exit gate. Read Section 26 before planning any category implementation; the short catalog is not sufficient on its own.
