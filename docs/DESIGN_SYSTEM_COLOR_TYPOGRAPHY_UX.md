@@ -84,3 +84,13 @@ Before approval: benchmark evidence; IA and role journeys; computed contrast mat
 
 ## 11. Open decisions
 Final palette after contrast calculation and prototype review; final font system after specimen/license/performance validation; density options for developer/ops tables; default theme and preference storage; breakpoints/container tokens; localization ownership; formal accessibility audit scope. Current status remains PROPOSED/PARTIAL.
+
+
+## 12. Reference material for validation
+
+- W3C, Web Content Accessibility Guidelines (WCAG) 2.2: https://www.w3.org/TR/WCAG22/ — normative accessibility criteria, including contrast, use of color, resizing and reflow.
+- W3C WAI, Understanding Contrast Minimum: https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html — explains the 4.5:1 normal-text and 3:1 large-text thresholds and why thresholds must not be rounded up.
+- Vercel Geist Design System: https://vercel.com/geist/introduction and https://vercel.com/geist/typography — a public example of a documented design system with explicit typography, colors and component foundations; reference for benchmarking, not a mandate to copy.
+- Google Fonts variable-font guidance: https://googlefonts.github.io/gf-guide/variable — reference for evaluating variable-font files and axes; final font choice still requires each candidate's own license and glyph checks.
+
+These references support design research only. They do not prove TEKORA conformance, font licensing for a selected distribution, or that any proposed palette passes contrast.
