@@ -193,3 +193,14 @@ Before requirements approval or implementation planning, read:
 - `docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md` — global IA, color architecture, category accents, themes, typography evaluation, components, accessibility, responsive UX and design gates.
 
 The design system is a first-class product requirement, not a final polish task. Do not silently promote proposed colors/fonts/SKUs/provider claims to approved facts. Do not begin implementation until discovery and phase authorization gates are satisfied.
+
+
+## Additional mandatory discovery references
+
+Before approving product requirements or implementation:
+- Provider and Tanzania country gates: `docs/PROVIDER_COUNTRY_INTEGRATION_DUE_DILIGENCE.md`
+- SKU/catalogue/pricing/metering: `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md`
+- Bounded contexts/API/events/data governance: `docs/ARCHITECTURE_API_EVENT_DATA_CONTRACTS.md`
+- Color contrast, typography and UX prototype gates: `docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md`
+
+Treat all candidate providers and MVP packages as hypotheses. Require written legal/commercial approval, verified provider capability, cost model, support/runbook and technical proof. Use separate financial state machines and reconcile UNKNOWN upstream outcomes. The #14B8A6 on white pairing fails contrast and cannot be used as text. Complete the full light/dark/system contrast matrix and font licensing/specimen/performance validation before design sign-off.
