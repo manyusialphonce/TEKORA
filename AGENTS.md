@@ -162,3 +162,16 @@ If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
 - OpenCode owns implementation in approved scope; v0/Figma are research/prototyping aids. Research Stripe, Vercel, Cloudflare, DigitalOcean, Supabase, Twilio and Linear honestly. Typography research must include Swahili/special characters, role-specific fonts, accessibility, performance and licensing.
 - Company ownership/shareholding is deferred; a separate Wi-Fi management system is excluded unless explicitly approved.
 - Refer to Blueprint Section 24 as the originating-intent reconciliation. If details conflict, record a decision/open question; do not silently discard or invent.
+
+## 15. Recovered platform-wide completeness requirements
+
+- Preserve the original company-operated ecosystem intent. Do not overlook a useful capability if secure and efficient delivery is feasible. Classify core/advanced/optional; deferral needs a status and rationale, never silent omission.
+- Connect services through a unified control plane: identity, organizations, projects/environments, IAM, secrets, catalog/bundles/dependencies, orders, provisioning, providers, billing, usage, monitoring, support, security, audit and notifications.
+- Discover customer organization/project workspaces, scoped roles and credentials, API marketplace/sandbox/SDKs/webhooks, docs and safe provider-supported deployment templates.
+- Define provisioning after verified payment or an approved credit/manual invoice path; require idempotency, secure configuration, health verification, safe credential delivery, audit, retry/timeout/compensation/rollback and outage handling.
+- Provider abstraction and failover are conditional goals. Validate provider contracts, capability differences, data consistency, DNS TTL, RTO/RPO, portability, cost and rollback.
+- Internal operations cover sales/CRM, quotes/contracts, finance/control-number reconciliation, provisioning, support/SLA, engineering/release/incident, infrastructure/network/cloud, security/audit, partners and professional-services project tracking.
+- Commercial lifecycle includes versioned pricing, quote/order snapshots, invoices, taxes/fees, receipts, subscriptions, metering/overage, credits, refunds/reversals, reconciliation, renewal, suspension and cancellation.
+- Tanzania is the initial context. Research TZS, local payment/bank/mobile-money and control-number pathways, .tz rules, privacy/tax/regulation. M-Pesa, Airtel Money, Mixx, HaloPesa, T-Pesa, CRDB and NMB are research candidates only.
+- Validate candidate differentiators: visual infrastructure map, telemetry-grounded AI assistant, cost optimization, multi-cloud, automation studio, reseller/white-label marketplace and automated lifecycle. Human approval for consequential AI actions.
+- Before implementation, trace accepted requirements to actor/value, acceptance, dependencies, data/tenant scope, contracts, security, test evidence, phase and approval. Blueprint Section 25 is canonical.
