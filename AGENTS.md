@@ -175,3 +175,12 @@ If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
 - Tanzania is the initial context. Research TZS, local payment/bank/mobile-money and control-number pathways, .tz rules, privacy/tax/regulation. M-Pesa, Airtel Money, Mixx, HaloPesa, T-Pesa, CRDB and NMB are research candidates only.
 - Validate candidate differentiators: visual infrastructure map, telemetry-grounded AI assistant, cost optimization, multi-cloud, automation studio, reseller/white-label marketplace and automated lifecycle. Human approval for consequential AI actions.
 - Before implementation, trace accepted requirements to actor/value, acceptance, dependencies, data/tenant scope, contracts, security, test evidence, phase and approval. Blueprint Section 25 is canonical.
+
+## 16. Category-level implementation discipline
+
+- Section 26 of the Master Blueprint is mandatory before category work. Never implement from short catalog bullets alone.
+- Complete all 18 specification-contract fields in Section 26.0 for each product/SKU. Unknowns must be TBD / NEEDS VERIFICATION / BLOCKED, never guessed.
+- Use stable TEK-CAT-XX-### requirement IDs with source/decision provenance and acceptance evidence.
+- Model state machines, configuration schemas, APIs/events, provider contracts, dependencies, security, failure compensation, billing/metering, UX, tests, runbooks and documentation.
+- Validate cross-category dependencies using Section 26.23. Reuse shared engines; do not create microservices merely because categories differ.
+- Apply Section 26.24 exit gate. UI existence or HTTP 200 is not proof of completion.
