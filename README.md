@@ -137,3 +137,13 @@ See [Category Deep Dive — All 22 Services](docs/CATEGORY_DEEP_DIVE_22_SERVICES
 ## Global design system, color and UX
 
 See [Design System — Color, Typography & UX](docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md). The global design system is mandatory across the public marketplace, customer portal, developer hub and internal operations. It covers the proposed palette, category accents, Light/Dark/System themes, typography candidates and specimen tests, information architecture, components, interaction states, WCAG 2.2 AA target and design approval gates. Color values and font candidates are provisional until contrast, licensing, language and performance checks pass.
+
+
+## Further discovery deliverables
+
+- [Provider, Country & Integration Due Diligence](docs/PROVIDER_COUNTRY_INTEGRATION_DUE_DILIGENCE.md) — public evidence, Tanzania-specific gates, candidate providers and required commercial/legal checks.
+- [Product Catalogue, SKU & Pricing Framework](docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md) — catalogue hierarchy, SKU contract, billing/metering models and MVP hypotheses.
+- [Architecture, API, Event & Data Contracts](docs/ARCHITECTURE_API_EVENT_DATA_CONTRACTS.md) — bounded contexts, API conventions, independent financial state machines, event envelope and data governance.
+- [Color, Typography & UX Validation](docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md) — preliminary light-theme contrast calculation, teal warning, font evaluation, prototype scope and usability acceptance.
+
+All are discovery baselines. Provider approval, commercial terms, legal opinions, final pricing, final font selection, full theme contrast and user testing remain open.
