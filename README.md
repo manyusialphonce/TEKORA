@@ -147,3 +147,12 @@ See [Design System — Color, Typography & UX](docs/DESIGN_SYSTEM_COLOR_TYPOGRAP
 - [Color, Typography & UX Validation](docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md) — preliminary light-theme contrast calculation, teal warning, font evaluation, prototype scope and usability acceptance.
 
 All are discovery baselines. Provider approval, commercial terms, legal opinions, final pricing, final font selection, full theme contrast and user testing remain open.
+
+
+## Comprehensive discovery addendum — preserved and expanded scope
+
+The additive register in [Comprehensive Discovery Addendum](docs/COMPREHENSIVE_DISCOVERY_ADDENDUM.md) establishes shared platform requirement IDs (PLT-001–PLT-024), parent requirement IDs for **all 22 categories (CAT-01–CAT-22)**, a child-ID convention, mandatory traceability fields, independent order/provisioning/payment/control-number/invoice/subscription/entitlement/usage/settlement/resource/incident state machines, cross-category workflow catalogue, shared API/data contract baseline, logical entity inventory, provider evidence classes (E0–E5), candidate provider due-diligence matrix, UX information architecture and screen acceptance inventory, MVP scoring method, 35 mandatory test scenarios, risk register (RSK-001–RSK-026), and open decisions (DEC-001–DEC-014).
+
+**Additive preservation rule:** this addendum does not replace or shorten the existing Blueprint, category deep dive, provider research, SKU/pricing, architecture, design-system or validation documents. All 22 categories remain in long-term scope even if a future MVP excludes some. Requirements and decisions must be versioned; do not silently delete or rewrite user-originated scope.
+
+**Current state remains discovery only.** Requirement child mappings, approved MVP SKUs, provider E2–E5 evidence, legal classification, final data/API schemas, prototypes, usability research, executable tests and formal phase approvals remain incomplete. No implementation or production capability is claimed.
