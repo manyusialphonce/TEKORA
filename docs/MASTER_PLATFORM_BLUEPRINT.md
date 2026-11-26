@@ -1260,3 +1260,7 @@ The companion [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPET
 ## Section 38 — SKU pricing analysis, Waves 02–04
 
 [SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) maps SKU families, billable units, monetization, bounded free-entry paths and evidence gates across Categories 03–22, completing the first SKU structure pass across all 22 categories when read with Wave 01. It does not establish approved prices, supplier costs, reseller permissions, regulatory status, tax treatment, margin floors or commercial launch readiness. Quote-based/blocked items must remain so until verified.
+
+## Pricing research and implementation source of truth
+
+The all-category pricing evidence and SKU definitions are maintained in `docs/MASTER_SKU_PRICING_CATALOGUE.md`, supported by Wave 01 (categories 01/02/09), Wave 02 (03–08), Wave 03 (10–22), and `docs/COMPETITOR_PRICING_BENCHMARK_MATRIX.md`. These documents are additive to this Blueprint and do not reduce the 22-category scope. Pricing remains provisional; no customer-facing price, margin, provider cost, control-number fee, supplier commitment or launch authorization is implied. OpenCode must read them before pricing-related implementation and preserve the approval, legal, supplier, security and operational gates.
