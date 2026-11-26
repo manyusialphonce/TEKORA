@@ -1250,3 +1250,8 @@ The companion [Competitive Pricing Benchmark Matrix](COMPETITOR_PRICING_BENCHMAR
 The matrix preserves the conditional 3–8% undercut hypothesis only where a like-for-like comparison and approved unit economics support it. It does not establish TEKORA retail prices, supplier costs, reseller rights, regulatory eligibility, tax treatment or launch readiness. Quote-based categories remain quote-based until written cost and operational evidence is available.
 
 **Status: PARTIAL / DISCOVERY.** The 22-category first-pass mapping is documented; SKU-by-SKU supplier quotes, normalized 3–5 competitor comparisons where available, tax/FX, margin-floor approval, free quotas and commercial authorization remain open.
+
+
+## Section 37 — SKU-level competitive pricing analysis, Wave 01
+
+The companion [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) expands Categories 01, 02 and 09 into detailed SKU comparisons, local competitor tiers, provisional TEKORA target ranges, free-entry rules and commercial validation gates. It is additive to Sections 35–36 and preserves all 22 categories in scope. No candidate price is approved until supplier quotes, full unit economics, tax/legal review and price-book approval are complete.
