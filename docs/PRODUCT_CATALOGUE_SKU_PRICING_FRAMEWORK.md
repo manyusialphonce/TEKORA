@@ -327,3 +327,8 @@ The additive [Competitive Pricing Benchmark Matrix](COMPETITOR_PRICING_BENCHMARK
 ## 11. SKU-level competitor analysis — Wave 01
 
 [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) expands the all-category benchmark into SKU-level market comparisons for domains/DNS, hosting/compute and SMS/WhatsApp. The ranges are provisional hypotheses only. Supplier wholesale cost, legal eligibility, tax, support and margin approval remain mandatory before price publication.
+
+
+## 12. SKU analysis — Waves 02–04 (Categories 03–22)
+
+See [SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md). The companion covers SKU families, chargeable units, packaging and validation gates for categories 03–22. It is additive to the prior pricing research and the 22-category framework. It does not approve retail prices or substitute for supplier quotes, cost simulation, tax/legal review and price-book approval.
