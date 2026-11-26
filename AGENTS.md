@@ -198,3 +198,14 @@ If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
 ## 14. Mandatory global design-system compliance
 
 Read `docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md` and `docs/CATEGORY_DEEP_DIVE_22_SERVICES.md` before designing or specifying any product UI. One coherent design system governs all surfaces and categories. Do not create 22 unrelated visual systems. Treat all listed colors and font families as proposals until contrast calculations, glyph specimens, licensing and performance checks are evidenced. Enforce Light/Dark/System themes, semantic color tokens, category accents only as secondary cues, no color-only status, WCAG 2.2 AA target, keyboard/screen-reader/reflow/zoom checks, responsive layouts, complete loading/empty/error/disabled/focus states and visual regression. A design is not approved because it looks attractive in one screenshot.
+
+
+## 15. Discovery evidence and design validation
+
+Before approving a category, provider, SKU, payment capability, regulatory claim, price or design, consult:
+- `docs/PROVIDER_COUNTRY_INTEGRATION_DUE_DILIGENCE.md`
+- `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md`
+- `docs/ARCHITECTURE_API_EVENT_DATA_CONTRACTS.md`
+- `docs/COLOR_TYPOGRAPHY_UX_VALIDATION.md`
+
+Public documentation is not a contract or proof of eligibility. Require legal/commercial verification and technical evidence. Do not publish unverified provider coverage, licensing, .tz registrar status, payment/control-number support, price, tax treatment or SLA. Preserve separate order/payment/control-number/invoice/subscription/entitlement/settlement lifecycles. The proposed light palette contains a known failure: #14B8A6 on white is only 2.49:1 and must not be used as normal/large text there. Full theme/pair validation is mandatory. No font is approved until exact file licensing, Swahili/Latin glyphs and performance are checked.
