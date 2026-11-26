@@ -57,7 +57,7 @@ No existing document was intentionally shortened or deleted. Updates were made b
 | Master prompt workflow | `679a59a52c7fdb38fcd1e5114dd5ab2244222ab1` |
 | OpenCode config schema-key correction | `6550fb47a185391c734581a20261916d6ddf953f` |
 
-Additional Blueprint/report commits are recorded in the repository history after this report is created.
+Master Platform Blueprint Section 34 was committed as `03b2e12dbe5774b7dd7c907f29f9a29475538e9e`. This report itself was committed as `b99788d13eec2e0e153bddf0766ccb47b2702f9b`.
 
 ## 5. Validation performed and not performed
 
