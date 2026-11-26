@@ -128,3 +128,12 @@ The authoritative Blueprint now includes Section 26, an implementation-oriented 
 ## Second-pass category analysis
 
 The Master Blueprint Section 27 expands the 22 categories into candidate product workstreams and adds platform-wide consistency checks, failure/edge-case analysis, release classification and evidence standards. Section 27.8 explicitly records the current outcome as PARTIAL: final SKUs, provider/legal validation, detailed state machines, API/data contracts, pricing and product acceptance remain discovery work. Do not describe these as completed or start implementation based on the catalog alone.
+
+
+## Full 22-category deep dive
+
+See [Category Deep Dive — All 22 Services](docs/CATEGORY_DEEP_DIVE_22_SERVICES.md). It expands each category into candidate product families, lifecycle, data/contracts, security, failure modes and acceptance evidence. This is still a discovery baseline; providers, legal eligibility, prices, demand, SLAs and operational capacity remain to be verified.
+
+## Global design system, color and UX
+
+See [Design System — Color, Typography & UX](docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md). The global design system is mandatory across the public marketplace, customer portal, developer hub and internal operations. It covers the proposed palette, category accents, Light/Dark/System themes, typography candidates and specimen tests, information architecture, components, interaction states, WCAG 2.2 AA target and design approval gates. Color values and font candidates are provisional until contrast, licensing, language and performance checks pass.
