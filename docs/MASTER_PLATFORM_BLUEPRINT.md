@@ -1133,3 +1133,32 @@ Target WCAG 2.2 AA. Verify text/non-text contrast, keyboard operation, visible f
 The all-category deep dive is a stronger candidate-product baseline, not a final catalogue. Demand validation, provider/region/contracts, Tanzania legal/tax validation, SKU/price/cost/margin, state diagrams, API/event contracts, data/retention schemas, service ownership, support/SLA capacity, acceptance tests and runbooks remain open.
 
 **Overall status remains PARTIAL.** No application implementation or production capability is implied. Continue discovery phases and require explicit user approval before implementation.
+
+
+---
+
+## 29. Provider, country and integration due diligence
+
+Companion register: [Provider, Country & Integration Due Diligence](PROVIDER_COUNTRY_INTEGRATION_DUE_DILIGENCE.md).
+
+This register records public evidence and explicitly separates it from provider approval. TCRA public guidance states .tz registration is performed through accredited registrars; TEKORA must establish accreditation or a lawful partner/reseller path before making .tz registration claims. BoT/OAG materials identify the national payment-system regulatory framework, including updated published legislation/regulations; the precise TEKORA role must be legally classified. PDPA and PDPC materials require a data-protection compliance workstream. Twilio's published Tanzania SMS guidelines indicate sender-ID registration constraints and no two-way SMS support on that route. All provider offers remain candidates pending contract, region, cost, support, security and legal diligence.
+
+## 30. Product catalogue, SKU and pricing framework
+
+Companion register: [Product Catalogue, SKU & Pricing Framework](PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md).
+
+The catalogue hierarchy, versioned SKU fields, metering schema, billing models and price governance are specified. Candidate MVP packages are hypotheses, not an approved launch catalogue. No public prices or margins are approved. Pricing must account for provider costs, FX, tax, support, infrastructure, refunds, fraud, partner share and operational overhead. A quote must preserve a versioned price snapshot.
+
+## 31. Architecture, API, event and data contracts
+
+Companion register: [Architecture, API, Event & Data Contracts](ARCHITECTURE_API_EVENT_DATA_CONTRACTS.md).
+
+A modular-monolith baseline, bounded contexts, API conventions, event envelope, data governance and candidate state machines are documented. These are design proposals pending formal Architecture phase approval. Order, invoice, payment attempt, control number, subscription, entitlement, usage and settlement remain distinct aggregates. Upstream timeouts create UNKNOWN/reconciliation states, not assumed failures.
+
+## 32. Color, typography and UX validation
+
+Companion register: [Color, Typography & UX Validation](COLOR_TYPOGRAPHY_UX_VALIDATION.md).
+
+A preliminary WCAG contrast calculation found several proposed light-theme text pairings pass; #14B8A6 against white is 2.49:1 and fails both normal and large-text thresholds. Use it only as a non-essential decorative accent on white until a valid pairing is specified. Full theme matrix, focus/border/chart checks, font licensing/specimen/performance and usability evidence remain outstanding. The prototype screen set and design approval checklist are mandatory.
+
+**Section 29–32 status: PARTIAL.** These deliverables improve discovery maturity but do not constitute legal advice, provider approval, final pricing, production API implementation, completed UX research or implementation authorization.
