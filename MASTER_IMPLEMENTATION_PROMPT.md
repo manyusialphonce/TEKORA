@@ -213,3 +213,8 @@ Read `docs/COMPREHENSIVE_DISCOVERY_ADDENDUM.md` in full alongside every canonica
 **Do not reduce or remove existing scope.** The new register supplements all existing project documents. Preserve every category, feature, user-originated requirement, limitation, decision and unresolved item. Deferring a category/product from MVP does not delete it from the long-term platform scope. Version changes and retain history. Distinguish user requirements, approved decisions, assistant proposals and external obligations.
 
 The current status remains discovery/documentation only. No application implementation, provider activation, live payment, production deployment or launch is authorized by the existence of this addendum. Require evidence and explicit approval at each phase gate.
+
+
+## Mandatory Developer Free Domain Program scope
+
+Read `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` in full. Preserve the user-requested free hostname/subdomain program for junior developers, students, freelancers and builders. It must cover eligibility, reservation, DNS, TLS, target/deployment integration, expiry/renewal/quarantine, cost limits, abuse/takedown/appeal, tenant isolation, APIs/events, observability and acceptance tests. Do not conflate free DNS/subdomain with free custom-domain registration or free hosting/compute/email/storage/bandwidth. Verify TEKORA domain ownership and provider capabilities before making public claims. Treat all proposed IDs and free-tier limits as PROPOSED until decomposed and approved. Do not implement until the relevant phase is authorized.
