@@ -271,3 +271,7 @@ A pricing work package cannot close while any customer-facing price is unsupport
 ## Required pricing implementation inputs
 
 Before a phase that touches catalogue, product offers, SKU, pricing, checkout, billing, metering, subscriptions or provider fulfilment, include the Master SKU Pricing Catalogue and all three SKU Pricing Waves in the phase reading set. Convert each relevant SKU into traceable requirements and acceptance tests. Do not implement customer-visible prices from research hypotheses. Implement versioned price books, approval/audit, immutable quote snapshots, idempotent usage, budget/limit controls and explicit customer consent before paid conversion. Keep blocked categories unavailable until their legal/provider/operational gates pass.
+
+## OpenCode bootstrap and pricing evidence precedence
+
+Use `docs/OPENCODE_START_HERE.md` and `/tekora-start` as the first-session entry point. Perform Phase 00 read-only audit before preparing Phase 01. For pricing categories 03–22, use `SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md` as the detailed research source; category-focused Wave 02 and Wave 03 documents are summaries only. Do not resolve conflicting evidence silently.
