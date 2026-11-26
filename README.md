@@ -124,3 +124,7 @@ These are not all approved MVP features. Explicit requirements, assistant propos
 ## Category implementation depth
 
 The authoritative Blueprint now includes Section 26, an implementation-oriented specification for each of the 22 service categories. It defines product families, functional scope, workflows, data/integration boundaries, security/operations and acceptance expectations, plus an 18-point mandatory specification contract, cross-category dependency rules and category implementation exit gate. Read Section 26 before planning any category implementation; the short catalog is not sufficient on its own.
+
+## Second-pass category analysis
+
+The Master Blueprint Section 27 expands the 22 categories into candidate product workstreams and adds platform-wide consistency checks, failure/edge-case analysis, release classification and evidence standards. Section 27.8 explicitly records the current outcome as PARTIAL: final SKUs, provider/legal validation, detailed state machines, API/data contracts, pricing and product acceptance remain discovery work. Do not describe these as completed or start implementation based on the catalog alone.
