@@ -233,3 +233,7 @@ This runbook prepares the development environment; it does not claim that OpenCo
 ## OpenCode pricing handoff
 
 The pricing implementation entry point is `docs/MASTER_SKU_PRICING_CATALOGUE.md`. Read it with Wave 01–03 before pricing or catalogue work. These documents define the SKU families for all 22 categories, canonical charging units, required SKU data, status vocabulary, pricing controls, provider/legal blockers and staged implementation sequence. Treat all market bands as hypotheses only. OpenCode must not silently publish, activate, charge or provision any offer based on these documents.
+
+## Single entry point for OpenCode
+
+Start from `docs/OPENCODE_START_HERE.md` and execute `/tekora-start`. This command performs a read-only Phase 00 audit and stops at the owner-approval gate. For Categories 03–22, use `docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md` as the detailed consolidated research source; Wave 02 and Wave 03 are summary companions.
