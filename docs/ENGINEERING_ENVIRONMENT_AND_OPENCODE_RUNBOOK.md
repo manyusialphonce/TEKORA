@@ -229,3 +229,7 @@ The repository is READY FOR PHASED IMPLEMENTATION only when:
 - The phase report identifies remaining blockers and owner decisions.
 
 This runbook prepares the development environment; it does not claim that OpenCode is installed on the owner's machine, that the repository has been cloned locally, or that any build/test has run.
+
+## OpenCode pricing handoff
+
+The pricing implementation entry point is `docs/MASTER_SKU_PRICING_CATALOGUE.md`. Read it with Wave 01–03 before pricing or catalogue work. These documents define the SKU families for all 22 categories, canonical charging units, required SKU data, status vocabulary, pricing controls, provider/legal blockers and staged implementation sequence. Treat all market bands as hypotheses only. OpenCode must not silently publish, activate, charge or provision any offer based on these documents.
