@@ -184,3 +184,12 @@ Analyse each category individually and model cross-category dependencies under S
 ## Second-pass category discovery requirement
 
 Blueprint Sections 26 and 27 are mandatory for category planning. Section 27.3 lists candidate product workstreams for analysis, not guaranteed launch scope or verified provider support. Complete product/SKU decomposition, ownership/delivery model, provider and legal validation, state machines, data/API/event contracts, pricing/metering, failure cases, security, operations, UX, testing and evidence before implementation. Section 27.8 remains the honest discovery status: PARTIAL. Do not claim categories are fully specified or begin implementation without the required approvals.
+
+
+## Mandatory all-category and design-system references
+
+Before requirements approval or implementation planning, read:
+- `docs/CATEGORY_DEEP_DIVE_22_SERVICES.md` — all 22 category product workstreams, lifecycle, provider/data/security dependencies, failure modes and acceptance evidence.
+- `docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md` — global IA, color architecture, category accents, themes, typography evaluation, components, accessibility, responsive UX and design gates.
+
+The design system is a first-class product requirement, not a final polish task. Do not silently promote proposed colors/fonts/SKUs/provider claims to approved facts. Do not begin implementation until discovery and phase authorization gates are satisfied.
