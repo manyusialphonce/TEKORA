@@ -184,3 +184,12 @@ If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
 - Model state machines, configuration schemas, APIs/events, provider contracts, dependencies, security, failure compensation, billing/metering, UX, tests, runbooks and documentation.
 - Validate cross-category dependencies using Section 26.23. Reuse shared engines; do not create microservices merely because categories differ.
 - Apply Section 26.24 exit gate. UI existence or HTTP 200 is not proof of completion.
+
+## 17. Second-pass category analysis is mandatory
+
+- Read Blueprint Sections 26 and 27 before proposing implementation for any category.
+- Section 27.3 contains candidate product workstreams, not commitments or verified provider capabilities.
+- Apply Section 27.2 product decomposition and Section 27.4 platform consistency checks to every proposed SKU.
+- Analyse failure scenarios from Section 27.5, classify release priority under Section 27.6 and maintain traceability/evidence under Section 27.7.
+- Respect Section 27.8: category discovery remains PARTIAL until provider/legal validation, detailed state machines, API/data contracts, price books and measurable acceptance are evidenced and approved.
+- Do not infer implementation authorization from documentation changes. The user must approve phase progression explicitly.
