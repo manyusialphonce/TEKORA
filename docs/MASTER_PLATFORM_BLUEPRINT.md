@@ -1239,3 +1239,14 @@ The catalogue must support category-appropriate Free Forever, Freemium, Trial, P
 Required capabilities include competitor benchmark registry, provider cost quotes, FX snapshots, versioned price books, immutable quote/invoice/subscription snapshots, margin simulation, promotions, free-tier entitlements, budgets/spend caps, pricing approvals, price-change notices and customer-facing disclosure. Separate provider pass-through, TEKORA fee, taxes, payment collection/payout fees and credits.
 
 All 22 category charging dimensions and initial free/paid hypotheses are mapped in the pricing framework. Public benchmark research remains PARTIAL; no TEKORA final customer-facing price, margin, free quota, tax treatment or payment fee is approved until commercial, provider, finance and legal validation.
+
+
+---
+
+## Section 36 — All-22-category competitive pricing benchmark matrix
+
+The companion [Competitive Pricing Benchmark Matrix](COMPETITOR_PRICING_BENCHMARK_MATRIX.md) adds a first-pass public competitor pricing and free-to-paid monetization analysis for all 22 categories. It maps chargeable SKUs/units, available Tanzania and international price anchors, provisional competitive positioning, free-entry paths, evidence grades, cost/margin methodology and unresolved commercial/legal/provider blockers. Read it together with Section 35 and the Product Catalogue/SKU/Pricing Framework; it is additive and does not replace prior scope.
+
+The matrix preserves the conditional 3–8% undercut hypothesis only where a like-for-like comparison and approved unit economics support it. It does not establish TEKORA retail prices, supplier costs, reseller rights, regulatory eligibility, tax treatment or launch readiness. Quote-based categories remain quote-based until written cost and operational evidence is available.
+
+**Status: PARTIAL / DISCOVERY.** The 22-category first-pass mapping is documented; SKU-by-SKU supplier quotes, normalized 3–5 competitor comparisons where available, tax/FX, margin-floor approval, free quotas and commercial authorization remain open.
