@@ -223,3 +223,8 @@ Preservation rules:
 - A provider at E1 is not approved; provider onboarding requires risk-appropriate E2–E5 evidence.
 - UNKNOWN upstream outcomes require reconciliation before retry or customer claims.
 - No requirement is DONE without evidence; no implementation begins without the relevant phase gate and explicit user authorization.
+
+
+## Mandatory free developer hostname scope
+
+Preserve `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` as an additive requirement. Do not remove or narrow the free subdomain program for junior developers and students. Audit domain ownership, DNS/TLS, tenant isolation, abuse, expiry/quarantine, cost, provider terms and legal obligations before any launch. Free hostname must remain distinct from free hosting or paid registrable domains. No implementation without phase authorization.
