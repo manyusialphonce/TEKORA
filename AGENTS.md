@@ -253,3 +253,7 @@ Preserve `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` as an additive requirement. Do 
 - Never silently auto-convert a free trial to paid or create surprise overage charges. Require explicit paid-conversion/overage authorization where applicable.
 - Do not publish or implement real prices, payment fees, taxes, domain fees or provider pass-through rates as approved without dated evidence and commercial/legal approval.
 - Price versions and historical quote/invoice/subscription snapshots are immutable. Every price change requires role-controlled approval and audit.
+
+## Mandatory pricing/catalogue context for OpenCode
+
+Before any catalogue, checkout, billing, metering, quote, subscription or pricing implementation, read `docs/MASTER_SKU_PRICING_CATALOGUE.md` and all three SKU Pricing Waves. Preserve all 22 categories and all existing requirements. Treat public prices and target bands as provisional evidence, never as approved TEKORA prices or supplier costs. Do not activate provider integrations, publish prices, charge real funds, use control numbers, incur production spend or promise SLAs without explicit approval and validated contracts. Follow the catalogue's required SKU data contract, commercial status vocabulary, versioned price book, immutable snapshots, idempotent metering, hard quotas, explicit paid opt-in and acceptance tests.
