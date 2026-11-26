@@ -202,3 +202,13 @@ Wave 01 research evidence and limitations are recorded in [SKU Pricing Wave 01 R
 
 
 Research evidence and limitations for Waves 02–04 are recorded in [SKU Pricing Waves 02–04 Research Report](docs/reports/2026-11-26-SKU-PRICING-WAVES-02-04-REPORT.md).
+
+## Pricing implementation handoff (all 22 categories)
+
+- [Master SKU Pricing Catalogue](docs/MASTER_SKU_PRICING_CATALOGUE.md) — canonical SKU registry, charging units, required data contract, approval states, commercial safeguards and OpenCode implementation sequence.
+- [SKU Pricing Wave 01](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) — categories 01, 02 and 09.
+- [SKU Pricing Wave 02](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_02.md) — categories 03–08.
+- [SKU Pricing Wave 03](docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVE_03.md) — categories 10–22.
+- [Pricing Research Completion & OpenCode Handoff](docs/reports/2026-11-26-PRICING-RESEARCH-OPENCODE-HANDOFF.md).
+
+**Important:** all pricing research remains provisional. Public competitor prices are not TEKORA wholesale costs or approved selling prices. See the Master SKU Catalogue for launch gates and explicit non-authorizations.
