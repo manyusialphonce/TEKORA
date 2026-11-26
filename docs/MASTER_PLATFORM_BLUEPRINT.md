@@ -1255,3 +1255,8 @@ The matrix preserves the conditional 3–8% undercut hypothesis only where a lik
 ## Section 37 — SKU-level competitive pricing analysis, Wave 01
 
 The companion [SKU-Level Competitive Pricing Analysis, Wave 01](SKU_LEVEL_COMPETITIVE_PRICING_WAVE_01.md) expands Categories 01, 02 and 09 into detailed SKU comparisons, local competitor tiers, provisional TEKORA target ranges, free-entry rules and commercial validation gates. It is additive to Sections 35–36 and preserves all 22 categories in scope. No candidate price is approved until supplier quotes, full unit economics, tax/legal review and price-book approval are complete.
+
+
+## Section 38 — SKU pricing analysis, Waves 02–04
+
+[SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) maps SKU families, billable units, monetization, bounded free-entry paths and evidence gates across Categories 03–22, completing the first SKU structure pass across all 22 categories when read with Wave 01. It does not establish approved prices, supplier costs, reseller permissions, regulatory status, tax treatment, margin floors or commercial launch readiness. Quote-based/blocked items must remain so until verified.
