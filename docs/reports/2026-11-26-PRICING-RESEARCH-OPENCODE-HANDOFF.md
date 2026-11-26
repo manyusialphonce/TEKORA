@@ -27,3 +27,9 @@ OpenCode must read the canonical docs in the order specified by the Master SKU C
 
 ## Verification
 Repository files and references must be re-fetched after commit. No local runtime validation or application tests are claimed by this documentation-only work.
+
+## Repository integration and OpenCode entry point
+
+The consolidated detailed research for categories 03–22 already exists in `docs/SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md`. Newly added Wave 02 (03–08) and Wave 03 (10–22) are quick-reference summaries, not a replacement for that document. The canonical OpenCode start guide is `docs/OPENCODE_START_HERE.md`, invoked with `/tekora-start`.
+
+A fresh recursive GitHub tree read on 26 November 2026 confirmed the repository contains documentation, OpenCode command configuration and `opencode.json`, but no application source tree, package/build manifest, migration, test suite or CI workflow in that snapshot. OpenCode must re-check the actual local checkout; this observation is not a claim about any uncommitted local files.
