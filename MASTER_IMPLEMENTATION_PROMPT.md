@@ -238,3 +238,10 @@ OpenCode command workflow:
 4. `/tekora-verify <scope>` — independent verification.
 
 The Technical Decision Register contains recommendations, not owner approvals. Preserve all 22 service categories and previous requirements. Do not spend money, create paid infrastructure, register/transfer domains, modify production DNS, enable live payments, send real messages, process real customer data or launch publicly without separate explicit authorization. Follow the Implementation Execution Playbook's phase gates and Definition of Done. Record evidence and reports; never fabricate results.
+
+ 
+## Mandatory pricing and monetization strategy
+
+Before implementing Catalog, SKU, checkout, billing, subscriptions, payments, usage metering, promotions or free tiers, read `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md` in full. Its platform-wide pricing strategy covers every one of the 22 categories, competitor benchmark evidence, conditional 3–8% undercut hypothesis, provider-cost/margin floors, TZS localization, Free/Freemium/Trial/Credits/Sandbox/Paid/Pay-as-you-go/Quote models, no-surprise billing, versioned price books and approval gates.
+
+Do not treat competitor list prices as TEKORA supplier costs or as approval to publish a retail price. Do not make all services free. Free offers must have category-specific limits and cost/abuse controls. Never auto-charge at trial end without explicit and valid customer consent. Pricing/finance/legal/provider approval is required before publishing customer-facing prices or payment fees.
