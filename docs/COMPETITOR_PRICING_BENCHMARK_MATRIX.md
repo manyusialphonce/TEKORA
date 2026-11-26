@@ -199,3 +199,7 @@ The first detailed SKU analysis is available in [SKU-Level Competitive Pricing A
 ## SKU pricing coverage — Waves 02–04
 
 [SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md) extends detailed pricing structures through Categories 03–22. This is a first-pass pricing architecture: public prices are benchmarks only; where evidence is weak or services are contract-specific, pricing remains quote-based or blocked. All 22 categories remain in scope; commercial approval remains outstanding.
+
+## 8. SKU-level research waves
+
+For detailed SKU families, units, observed anchors, proposed hypotheses and unresolved quote/legal/provider gates, use `MASTER_SKU_PRICING_CATALOGUE.md` and Wave 01–03. The waves do not replace this all-category benchmark matrix. All public retail anchors require revalidation before commercial use.
