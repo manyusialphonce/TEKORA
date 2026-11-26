@@ -161,3 +161,15 @@ The additive register in [Comprehensive Discovery Addendum](docs/COMPREHENSIVE_D
 ## Free developer domains
 
 TEKORA's discovery scope now includes the user-requested **Developer Free Domain & Preview Environment Program**. See [Developer Free Domain Program](docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md). It proposes free TEKORA-managed subdomains for eligible junior developers, students and builders to test, preview and demonstrate projects. A free hostname is not automatically free hosting, compute, email, storage or a registrable custom domain. Suffix ownership, DNS/TLS provider, exact quotas, renewal policy, abuse operations, costs and legal terms remain unverified; the feature is not implemented or approved for launch.
+
+
+## OpenCode implementation environment
+
+The repository now includes an OpenCode-ready engineering workflow:
+- [Engineering Environment & OpenCode Runbook](docs/ENGINEERING_ENVIRONMENT_AND_OPENCODE_RUNBOOK.md)
+- [Technical Decision Register](docs/TECHNICAL_DECISION_REGISTER.md)
+- [Implementation Execution Playbook](docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md)
+- [OpenCode project configuration](opencode.json)
+- Project commands under `.opencode/commands/`: `/tekora-audit`, `/tekora-prepare`, `/tekora-implement`, `/tekora-verify`.
+
+**Current implementation status:** documentation and implementation preparation only. The inspected repository baseline contains no application source code, build manifests, migrations, automated test suite or CI workflow. Re-audit the current checkout before implementation. Proposed technology decisions remain subject to explicit approval. OpenCode must begin with Phase 00 audit and must not infer authorization for paid services, production DNS, live payments, external messaging or public deployment.
