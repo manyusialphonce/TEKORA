@@ -1208,3 +1208,21 @@ The additive specification in `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` records th
 **Important distinction:** free hostname/subdomain does not mean free registrable domain, hosting, compute, database, email, bandwidth or SLA. Example suffixes are illustrative only. Do not promise a suffix until TEKORA ownership/control and provider/registry terms are verified. Prefer a dedicated registrable domain for untrusted preview content to isolate it from account/staff origins; security review must approve the final trust boundary. Wildcard DNS must be paired with an active-hostname allowlist and must not route arbitrary unallocated names.
 
 Proposed traceability additions: PLT-025; CAT-01-FN-001; CAT-01-SEC-001; CAT-02-FN-001; CAT-11-FN-001; CAT-12-FN-001; CAT-13-SEC-001; CAT-14-OPS-001; CAT-18-COM-001. These are PROPOSED and require child decomposition, cost/provider/legal validation, MVP scoring and approval. The full specification is mandatory reading before implementing this capability. No implementation or launch is claimed.
+
+
+## Section 34 — OpenCode implementation environment and execution controls
+
+TEKORA now maintains an implementation environment package for OpenCode. The package supplements rather than replaces this Blueprint, the 22-category specifications, the design system, provider due diligence, product catalogue, architecture contracts and Developer Free Domain specification.
+
+Mandatory companion documents:
+- `docs/ENGINEERING_ENVIRONMENT_AND_OPENCODE_RUNBOOK.md` — local development environment, secret boundaries, Git workflow, OpenCode workflow and readiness criteria.
+- `docs/TECHNICAL_DECISION_REGISTER.md` — explicit proposed technology baseline and unresolved architecture/provider decisions.
+- `docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md` — phase roadmap, work-package template, test matrix, Definition of Done and owner approval gates.
+
+OpenCode project configuration is maintained in `opencode.json`; repeatable project commands are in `.opencode/commands/`. Root `AGENTS.md` remains the authoritative project rule file. OpenCode's default session mode is planning; implementation must be invoked only for a bounded, explicitly approved scope.
+
+**Current verified baseline:** the recursive GitHub `main` tree snapshot used for this preparation contained documentation and OpenCode configuration only; no application source tree, package/build manifest, database migration, automated test suite or CI workflow was present. OpenCode must re-audit the live checkout before acting because this is a dated snapshot.
+
+Technical stack options in the Decision Register are PROPOSED until the owner approves them. The existence of this section does not authorize application scaffolding, dependency installation, provider onboarding, domain registration, DNS changes, cloud spend, live payments, external customer communications or public launch.
+
+All implementation remains phase-based. The first OpenCode task is a read-only Phase 00 repository audit. Phase reports belong in `docs/reports/`; README records actual repository state; this Blueprint records intended/approved product scope. No category or prior requirement may be removed as a shortcut.
