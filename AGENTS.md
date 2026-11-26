@@ -193,3 +193,8 @@ If a gate fails, mark PARTIAL/BLOCKED and stop phase advancement.
 - Analyse failure scenarios from Section 27.5, classify release priority under Section 27.6 and maintain traceability/evidence under Section 27.7.
 - Respect Section 27.8: category discovery remains PARTIAL until provider/legal validation, detailed state machines, API/data contracts, price books and measurable acceptance are evidenced and approved.
 - Do not infer implementation authorization from documentation changes. The user must approve phase progression explicitly.
+
+
+## 14. Mandatory global design-system compliance
+
+Read `docs/DESIGN_SYSTEM_COLOR_TYPOGRAPHY_UX.md` and `docs/CATEGORY_DEEP_DIVE_22_SERVICES.md` before designing or specifying any product UI. One coherent design system governs all surfaces and categories. Do not create 22 unrelated visual systems. Treat all listed colors and font families as proposals until contrast calculations, glyph specimens, licensing and performance checks are evidenced. Enforce Light/Dark/System themes, semantic color tokens, category accents only as secondary cues, no color-only status, WCAG 2.2 AA target, keyboard/screen-reader/reflow/zoom checks, responsive layouts, complete loading/empty/error/disabled/focus states and visual regression. A design is not approved because it looks attractive in one screenshot.
