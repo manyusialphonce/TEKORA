@@ -529,3 +529,119 @@ Do not silently resolve legal, financial, commercial or provider questions by as
 ## 23. Immediate next step
 
 Perform Phase 00 discovery and project-definition reconciliation. Inventory the original discussions and decisions, verify current repository/tool context, identify missing requirements and ambiguities, create a traceable decision/assumption/risk/open-question register, and propose Phase 00 acceptance criteria. Do not start Phase 01 or implementation until the user explicitly approves.
+
+
+## 24. Original-idea reconciliation and completeness requirements
+
+This section preserves the originating product intent and the constraints raised during the planning discussions. It supplements—not replaces—the detailed catalog and requirements above. If a later phase discovers a conflict, record it in the decision register and obtain approval; do not silently discard an earlier user requirement.
+
+### 24.1 Originating service proposition
+
+The initial proposition was a company-operated platform through which the company can provide, sell, provision, configure, operate and support technology services. The first explicit examples were:
+- web and application hosting;
+- web/software development services;
+- server and website essentials;
+- payment gateway integration/provisioning;
+- business and transactional email;
+- SMS services;
+- other useful web, infrastructure and digital technology services discovered during analysis.
+
+These examples are foundational, not the limit of the platform. They must remain discoverable in the 22-category catalog and be mapped to actual products, plans, delivery methods and operational requirements during later phases. The platform must be more than a brochure, a list of links, a conventional hosting storefront or a thin redirect to unrelated provider dashboards.
+
+### 24.2 Company-operated platform versus service delivery model
+
+The company is the operator of the TEKORA platform and the customer-facing service experience. This does not mean every underlying network, data centre, registrar, payment rail, email/SMS route, cloud, AI model or other infrastructure must be owned by the company. For each catalogue item, explicitly classify the delivery model:
+- company-built/company-operated;
+- company-owned infrastructure or software;
+- company-managed third-party infrastructure/service;
+- integrated external provider;
+- authorized reseller/white-label;
+- partner-delivered professional service;
+- hybrid or customer-provided infrastructure.
+
+For each offer, disclose who actually operates the underlying service, the provider dependency, support boundary, data location where known, service limitations, contract/SLA responsibility, billing responsibility, and what happens when the provider is unavailable. Do not present an integration as an owned service or a planned capability as currently available.
+
+### 24.3 Breadth, completeness and launch prioritization
+
+The user explicitly requested exhaustive analysis across all 22 service categories and asked that advanced services remain in the overall catalog rather than being omitted simply because they may not launch in the first release. Therefore:
+- preserve all 22 categories and their subfeatures in the long-term product discovery scope;
+- assess every category, not only hosting, domains, email, SMS and payments;
+- distinguish the full platform vision from the initial launch/MVP;
+- prioritize launch items using customer value, demand, feasibility, delivery readiness, provider access, legal/regulatory exposure, operating cost, support burden, security risk and differentiation;
+- defer a service only through an explicit status and rationale; do not silently delete it;
+- a category may contain multiple independently launchable products, plans and delivery modes.
+
+The goal is a professional, differentiated, broadly useful technology-services platform with real operational value. Breadth must not become an unsupported promise: service availability is enabled only after delivery capability, provider authorization, security, support, pricing and operational readiness are verified.
+
+### 24.4 Audience and use-case discovery
+
+Candidate audience groups to validate—not assume as finalized market segmentation—include individuals, developers, freelancers, startups, SMEs, established businesses, agencies, IT teams, enterprises, institutions, resellers/technology partners and organizations needing managed technology services. Phase 00/01 must identify priority personas, jobs-to-be-done, purchasing authority, technical skill, support expectations and the first high-value use cases.
+
+At minimum, investigate:
+- a customer discovering and comparing a service, requesting a quote or purchasing a plan;
+- a developer creating a project, obtaining sandbox credentials, testing an API and configuring webhooks;
+- an organization administering members, workspaces, projects, services, roles and invoices;
+- an operator provisioning and supporting a customer service across internal and external providers;
+- finance staff reconciling invoices, payments, control numbers, refunds and exceptions;
+- infrastructure/security staff monitoring resources, incidents, risk, capacity and provider health;
+- a reseller/partner onboarding, managing delegated customers and understanding commercial boundaries.
+
+These are discovery scenarios, not a claim that every workflow or persona has already been approved.
+
+### 24.5 Minimum cross-catalog service lifecycle
+
+For every service/product, analyse the complete lifecycle, as applicable:
+1. discover, search, compare and understand prerequisites;
+2. select product, plan, region, configuration and add-ons;
+3. obtain a quote or place an order;
+4. authenticate, authorize and satisfy eligibility/KYC/provider requirements where applicable;
+5. pay or use an approved invoicing/credit arrangement;
+6. create invoice/receipt and reconcile financial state;
+7. provision through an owned system, provider adapter or controlled manual workflow;
+8. configure resources, domain, credentials, integrations and security;
+9. deliver onboarding, documentation and operational guidance;
+10. expose status, usage, quotas, health, logs and support;
+11. change plan, scale, renew, suspend, resume or cancel;
+12. handle failure, timeout, provider outage, refund, reversal, migration, export and closure.
+
+Not every service has identical steps. Define service-specific state machines, prerequisites, entitlements, approvals, idempotency, compensation and customer-visible statuses. Do not equate order paid, payment confirmed, provisioning complete and service operational; they are separate states.
+
+### 24.6 Payment and Tanzania control-number requirements
+
+Control-number management is a first-class capability within the payment/billing domain, not merely a text field on an invoice. Preserve a distinct control-number lifecycle and its relationship to (but separation from) invoice, order, customer, organization, subscription and payment transactions. Analyse generation/request, assignment, uniqueness, provider reference, amount and currency, issue time, expiry, renewal/replacement, cancellation, status query, payment matching, duplicate notifications, partial/under/overpayment where supported, unmatched/late payment, reversal/refund, reconciliation, exception queues, audit history and customer/staff notifications.
+
+The platform must verify payment using authenticated provider callbacks and/or provider-side status queries with signature validation, idempotency and replay protection. Screenshots, uploaded receipts or customer assertions alone must never mark a payment as confirmed. Provider capabilities, government/bank collection rules, fees, settlement, refund rules and legal/regulatory treatment must be verified for Tanzania before live operation. Sandbox simulations must be isolated and conspicuously labelled as simulated. Never assume TEKORA is a licensed payment processor, bank, custodian or collection authority.
+
+### 24.7 Research and design execution constraints
+
+OpenCode is the primary implementation agent and owns repository implementation within the explicitly authorized scope. It must know and document the frontend, backend, database and supporting technologies selected after validation. v0, Figma and reference platforms are research/prototyping aids; they must not silently become competing repository implementers.
+
+For each major service family and workflow, research relevant real products and document the observation date/source, user journey, information hierarchy, navigation, content density, forms/tables, interaction states, typography, responsive behaviour, accessibility, performance, error recovery, adopted/adapted/rejected patterns and rationale. The named benchmark set is Stripe, Vercel, Cloudflare, DigitalOcean, Supabase, Twilio and Linear. Research must be genuine; do not claim a benchmark was inspected without evidence. Produce an original TEKORA design.
+
+Typography is a mandatory research decision: evaluate distinct premium, highly legible font families and weights for headings, body, UI labels, numbers/data and code/technical content. Test Swahili, English, special characters, dense data, mobile and responsive rendering, accessibility, performance, licensing and fallback. Do not choose a generic default merely for convenience.
+
+### 24.8 Discovery-before-specification rule
+
+The user's requested order was to understand the platform, explore the service landscape and provide an overview/recommendations before locking detailed requirements or writing implementation code. Preserve that sequence:
+- Phase 00: reconcile original idea, context, actors, outcomes, constraints and assumptions;
+- Phase 01: analyse all 22 categories, subservices, alternatives, market/provider gaps and delivery feasibility;
+- Phase 02: convert validated findings into traceable, testable requirements;
+- Phase 03: research and design user experiences;
+- Phase 04: validate technical architecture, including the exact frontend, backend, database and integration stack;
+- implementation only after the relevant design and phase approvals.
+
+Do not treat the current draft catalog or proposed technology stack as proof that discovery, requirements, architecture or implementation is complete.
+
+### 24.9 Explicit exclusions and deferred matters
+
+- Company ownership structure, shareholding and broader company-ownership discussion are deferred until after the platform itself has been defined; do not derail product discovery with them.
+- A separate Wi-Fi management system is outside TEKORA unless the user explicitly approves a future integration or scope change.
+- No requirement to own all infrastructure; choose delivery per service based on value, control, cost, capability, compliance and provider terms.
+- Do not force all 22 categories into the first release, but do not erase advanced categories from the full catalogue.
+- Do not invent provider partnerships, registrar accreditation, payment licensing, regulatory approval, certifications, service availability, benchmarks or implementation evidence.
+
+### 24.10 Reconciliation status
+
+The currently published documents cover the principal platform vision, three experience surfaces, 22 draft categories, shared engines, Developer Hub, internal operations, customer lifecycle, payment/control-number separation, UX and typography, architecture direction, security, integrations, roadmap and documentation governance. This reconciliation section makes the originating service proposition, company-as-platform-operator distinction, all-catalog-versus-launch distinction, candidate audiences, end-to-end lifecycle, Tanzania control-number safeguards, research-tool ownership and discovery order explicit.
+
+This is a document-level reconciliation based on the available planning context; it is not a verbatim transcript of every historical message and does not prove that every future requirement has been discovered. Items marked candidate, proposed, pending or requiring validation must retain those statuses until evidence or explicit user approval changes them.
