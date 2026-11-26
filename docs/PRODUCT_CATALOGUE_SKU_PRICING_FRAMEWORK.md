@@ -332,3 +332,7 @@ The additive [Competitive Pricing Benchmark Matrix](COMPETITOR_PRICING_BENCHMARK
 ## 12. SKU analysis — Waves 02–04 (Categories 03–22)
 
 See [SKU-Level Competitive Pricing Analysis — Waves 02–04](SKU_LEVEL_COMPETITIVE_PRICING_WAVES_02_04.md). The companion covers SKU families, chargeable units, packaging and validation gates for categories 03–22. It is additive to the prior pricing research and the 22-category framework. It does not approve retail prices or substitute for supplier quotes, cost simulation, tax/legal review and price-book approval.
+
+## 13. Canonical SKU catalogue and OpenCode handoff
+
+See `MASTER_SKU_PRICING_CATALOGUE.md` for the canonical 22-category SKU family registry, required SKU fields, pricing status model, margin formula, approval gates and implementation sequence. Research waves 01–03 contain the detailed category-level evidence and hypotheses. This framework remains authoritative for catalogue hierarchy, price-book versioning and commercial safeguards; the new catalogue is additive and does not supersede existing requirements.
