@@ -218,3 +218,23 @@ The current status remains discovery/documentation only. No application implemen
 ## Mandatory Developer Free Domain Program scope
 
 Read `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` in full. Preserve the user-requested free hostname/subdomain program for junior developers, students, freelancers and builders. It must cover eligibility, reservation, DNS, TLS, target/deployment integration, expiry/renewal/quarantine, cost limits, abuse/takedown/appeal, tenant isolation, APIs/events, observability and acceptance tests. Do not conflate free DNS/subdomain with free custom-domain registration or free hosting/compute/email/storage/bandwidth. Verify TEKORA domain ownership and provider capabilities before making public claims. Treat all proposed IDs and free-tier limits as PROPOSED until decomposed and approved. Do not implement until the relevant phase is authorized.
+
+
+## OpenCode execution environment (mandatory)
+
+Before any implementation, OpenCode must read:
+- `AGENTS.md`
+- `docs/ENGINEERING_ENVIRONMENT_AND_OPENCODE_RUNBOOK.md`
+- `docs/TECHNICAL_DECISION_REGISTER.md`
+- `docs/IMPLEMENTATION_EXECUTION_PLAYBOOK.md`
+- The Master Platform Blueprint and all relevant category, design, provider, pricing, architecture and feature specifications.
+
+The first assignment is a read-only Phase 00 repository audit using `/tekora-audit`. The current repository baseline was documentation-only; this must be verified against the live checkout. Do not generate application scaffolding or install dependencies before the stack decisions and foundation phase are approved.
+
+OpenCode command workflow:
+1. `/tekora-audit` — repository and documentation baseline.
+2. `/tekora-prepare <scope>` — work package, requirements, dependencies and acceptance criteria.
+3. `/tekora-implement <approved scope>` — implementation only after explicit scope/phase approval.
+4. `/tekora-verify <scope>` — independent verification.
+
+The Technical Decision Register contains recommendations, not owner approvals. Preserve all 22 service categories and previous requirements. Do not spend money, create paid infrastructure, register/transfer domains, modify production DNS, enable live payments, send real messages, process real customer data or launch publicly without separate explicit authorization. Follow the Implementation Execution Playbook's phase gates and Definition of Done. Record evidence and reports; never fabricate results.
