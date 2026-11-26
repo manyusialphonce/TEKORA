@@ -173,3 +173,9 @@ The repository now includes an OpenCode-ready engineering workflow:
 - Project commands under `.opencode/commands/`: `/tekora-audit`, `/tekora-prepare`, `/tekora-implement`, `/tekora-verify`.
 
 **Current implementation status:** documentation and implementation preparation only. The inspected repository baseline contains no application source code, build manifests, migrations, automated test suite or CI workflow. Re-audit the current checkout before implementation. Proposed technology decisions remain subject to explicit approval. OpenCode must begin with Phase 00 audit and must not infer authorization for paid services, production DNS, live payments, external messaging or public deployment.
+ 
+## Mandatory pricing and freemium strategy
+
+Pricing is a critical platform-wide capability across all 22 service categories. See [Product Catalogue, SKU & Pricing Framework](docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md) for the 26 November 2026 competitor benchmark snapshot, category-by-category monetization units, free/freemium/trial/sandbox/paid policy, TZS market positioning, cost and margin guardrails, price-book requirements and acceptance criteria.
+
+TEKORA's proposed competitive target is a modest 3–8% undercut of a genuinely comparable market offer only where provider cost, quality, tax, support and minimum contribution margin allow. This is not a universal discount or an approved retail price. Some products should be at parity, premium, usage-based or quote-only. Free tiers must have explicit limits and upgrade paths; never promise every service free or silently auto-charge after a trial. No customer-facing TEKORA price is approved until cost, provider, tax, margin and commercial review are complete.
