@@ -241,3 +241,15 @@ Preserve `docs/DEVELOPER_FREE_DOMAIN_PROGRAM.md` as an additive requirement. Do 
 - Do not make external changes or incur costs: no domain registration/transfer, production DNS, cloud resources, paid provider plans, live payments/payouts, real SMS/email, public launch or production data operations without separate explicit authorization.
 - Never commit secrets or real personal/customer data. Use isolated local/test environments and synthetic fixtures.
 - Never claim implementation, tests, security, compliance, provider approval or deployment without direct evidence.
+
+ 
+## Mandatory pricing and monetization rules
+
+- Treat `docs/PRODUCT_CATALOGUE_SKU_PRICING_FRAMEWORK.md` as mandatory for every catalogue, SKU, billing, promotion, subscription, free-tier or pricing implementation.
+- Cover all 22 categories; do not omit a category because no benchmark price is publicly available. Record benchmark gaps and validation work.
+- Separate competitor public price, provider wholesale cost, TEKORA proposed retail price and approved published price.
+- The 3–8% undercut is a conditional pricing hypothesis only. Never discount below verified fully loaded cost and category margin floor.
+- Support Free Forever, Freemium, Trial, Credits, Sandbox, Paid, Pay-as-you-go and Quote models where suitable. Define hard limits, end-of-limit behavior and upgrade/downgrade policies.
+- Never silently auto-convert a free trial to paid or create surprise overage charges. Require explicit paid-conversion/overage authorization where applicable.
+- Do not publish or implement real prices, payment fees, taxes, domain fees or provider pass-through rates as approved without dated evidence and commercial/legal approval.
+- Price versions and historical quote/invoice/subscription snapshots are immutable. Every price change requires role-controlled approval and audit.
